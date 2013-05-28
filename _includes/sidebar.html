@@ -1,0 +1,5 @@
+<div id="sidebar">
+	{% for cat in site.categories %}
+		<li><a href="/category/{{ cat[0] | replace: ' ', '-' }}/">{{ cat[0] }}</a></li>
+	{% endfor %}
+</div>

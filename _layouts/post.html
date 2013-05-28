@@ -1,0 +1,11 @@
+{% include document_head.html %}
+
+{% include header.html %}
+
+<body class="blog post {% if page.category %}{{ page.category | replace: ' ', '-' }}{% endif %}">
+
+<div id="content">
+	{{ content }}
+</div>
+
+{% include document_foot.html %}

@@ -1,0 +1,10 @@
+destination: ./deploy
+exclude: [
+    '.sass_cache',
+    'node_modules',
+    'src',
+    'Gruntfile.js',
+    'package.json'
+]
+keep_files:  ['.git', '.svn', 'assets']
+permalink : /blog/:year/:month/:title

@@ -1,0 +1,27 @@
+{
+  "name": "blacklabelcreative",
+  "description": "The black label creative website.",
+  "version": "0.0.1",
+  "author": "Jasal Vadgama - http://blacklabelcreative.com/",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/donofkarma/blacklabelcreative.git"
+  },
+  "main": "/",
+  "scripts": {
+    "test": "grunt test",
+    "all": "grunt"
+  },
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-cssmin": "~0.6.0",
+    "grunt-contrib-jshint": "0.4.3",
+    "grunt-contrib-sass": "0.3.0",
+    "grunt-contrib-uglify": "~0.2.0",
+    "grunt-contrib-watch": "0.4.3",
+    "grunt-jekyll": "~0.3.6"
+  }
+}
