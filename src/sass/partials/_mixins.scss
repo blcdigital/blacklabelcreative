@@ -28,10 +28,10 @@
 
 // rotation
 @mixin rotate($degree) {
-	-ms-transform: rotate(@degree);
-	-webkit-transform: rotate(@degree);
+	-ms-transform: rotate($degree);
+	-webkit-transform: rotate($degree);
 	-webkit-backface-visibility: hidden; /*Reduces jagged edges*/
-	transform: rotate(@degree);
+	transform: rotate($degree);
 }
 
 // linear gradients

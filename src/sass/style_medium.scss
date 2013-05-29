@@ -1,8 +1,8 @@
 /**
-* HTML/CSS/JS Template
+* blacklabelcreative.com
 *
 * @info		768px and up styling
-* @version	0.3.2
+* @version	0.0.1
 * @author	Jasal Vadgama - http://blacklabelcreative.com/
 **/
 
@@ -14,3 +14,54 @@
 /**
 * General
 **/
+
+/**
+* Header
+**/
+#header {
+	text-align: left;
+	overflow: hidden;
+
+	h1 {
+		float: left;
+	}
+
+	nav {
+		float: right;
+		padding-top: 100px;
+	}
+}
+
+/**
+* Posts
+**/
+/** More posts (homepage) **/
+.more-posts {
+	border-bottom: 1px solid $MED_GREY;
+	overflow: hidden;
+
+	.post {
+		clear: left;
+		float: left;
+		padding-bottom: 0;
+		width: 47.5%;
+		border: 0;
+
+		&:nth-child(even) {
+			clear: right;
+			float: right;
+		}
+	}
+}
+
+/**
+* Portfolio
+**/
+/** Latest work **/
+.latest-work {
+	li {
+		img {
+			width: 100%;
+		}
+	}
+}

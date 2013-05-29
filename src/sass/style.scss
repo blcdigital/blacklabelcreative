@@ -1,8 +1,8 @@
 /**
-* HTML/CSS/JS Template
+* blacklabelcreative.com
 *
 * @info		Baseline and 320px styling
-* @version	0.3.2
+* @version	0.0.1
 * @author	Jasal Vadgama - http://blacklabelcreative.com/
 **/
 
@@ -11,6 +11,7 @@
 **/
 /** SASS **/
 @import 'src/sass/partials/_variables.scss';
+@import 'src/sass/partials/_mixins.scss';
 /** RESET **/
 @import 'src/sass/reset.scss';
 
@@ -19,41 +20,217 @@
 **/
 body {
 	background: #fff;
-	color: #121212;
+	color: $DARK_GREY;
 	font: 14px/1.2em Helvetica, Arial, sans-serif;
 	/* stop font size scalling on orientation change - ADD FULL FIX */
 	-webkit-text-size-adjust: 100%;
 }
-section {
-	margin-bottom: $MARGIN_BOTTOM * 2;
+article {
+	margin-bottom: $STD_DISTANCE * 2;
+}
+a {
+	color: $ORANGE;
+	text-decoration: none;
+
+	@include transition(color, 0.1s, ease-in-out);
+
+	&:hover,
+	&:focus {
+		color: darken($ORANGE, 15%);
+	}
 }
 h1 {
-	margin-bottom: $MARGIN_BOTTOM;
-	font-size: 26px;
-	line-height: 1.2em;
+	margin-bottom: $STD_DISTANCE / 1.8;
+	font-size: 1.8em;
+	line-height: 1em;
+
+	a {
+		color: $DARK_GREY;
+
+		&:hover,
+		&:focus {
+			color: $ORANGE;
+		}
+	}
 }
+
 h2 {
-	margin-bottom: $MARGIN_BOTTOM / 2;
-	font-size: 20px;
-	line-height: 1.2em;
+	margin: $STD_DISTANCE * 1.4 0 $STD_DISTANCE / 1.4;
+	font-size: 1.4em;
+	line-height: 1em;
 }
 h3 {
-	margin-bottom: $MARGIN_BOTTOM;
+	margin-bottom: $STD_DISTANCE / 2;
+	font-size: 1.2em;
+	line-height: 1em;
 }
-p,
-ul {
-	margin-bottom: $MARGIN_BOTTOM;
+ul,
+ol {
+	margin-bottom: $STD_DISTANCE;
+	margin-left: $STD_DISTANCE * 1.5;
 }
-li {
-	margin: 0 0 5px 40px;
+p {
+	margin-bottom: $STD_DISTANCE;
+}
+code {
+	display: block;
+	margin-bottom: $STD_DISTANCE;
+	padding: 10px;
+	background: #333;
+	border-radius: 5px;
+	box-shadow: inset 0 1px 10px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.1), 0 -1px 0 rgba(0, 0, 0, 0.5);
+	color: $TERM_GREEN;
+	overflow: auto;
 }
 
 /**
 * Containers
 **/
 #pageWrapper {
-	margin: 1em auto 0;
-	width: 960px;
+	padding: 0 10px;
+}
+
+/**
+* Header
+**/
+#header {
+	margin-bottom: $STD_DISTANCE * 2;
+	text-align: center;
+}
+
+/**
+* Navigation
+**/
+nav {
+	ul {
+		margin: 0;
+	}
+
+	li {
+		display: inline-block;
+		font-size: 1.4em;
+		line-height: 1.2em;
+	}
+
+	a {
+		margin: 0 $STD_DISTANCE / 2;
+		color: lighten($DARK_GREY, 30%);
+
+		&:hover,
+		&:focus {
+			color: $DARK_GREY;
+		}
+	}
+}
+
+/**
+* Posts
+**/
+/** Post **/
+.post {
+	border-bottom: 1px solid $MED_GREY;
+
+	aside {
+		display: inline-block;
+		padding-top: $STD_DISTANCE / 2;
+		padding-right: 2.5%;
+		width: 22.5%;
+		vertical-align: top;
+	}
+
+	dl {
+		dt {
+			font-weight: bold;
+		}
+
+		dd {
+			&:after {
+				content: ","
+			}
+
+			&:last-child:after {
+				content: ""
+			}
+		}
+	}
+
+	.post-content {
+		display: inline-block;
+		padding-top: $STD_DISTANCE / 2;
+		padding-bottom: $STD_DISTANCE;
+		padding-left: 2.5%;
+		width: 70%;
+		border-left: 1px solid $MED_GREY;
+	}
+}
+/** More posts (homepage) **/
+.more-posts .post {
+	padding-bottom: $STD_DISTANCE;
+}
+
+/**
+* Portfolio
+**/
+/** Latest work **/
+.latest-work {
+	ul {
+		margin-bottom: $STD_DISTANCE * 2;
+		margin-left: 0;
+		list-style: none;
+		overflow: hidden;
+	}
+
+	li {
+		position: relative;
+		margin: 0 auto $STD_DISTANCE;
+		width: 300px;
+		height: 200px;
+		overflow: hidden;
+
+		a {
+			color: #fff;
+
+			&:hover,
+			&:focus {
+				color: $ORANGE;
+			}
+		}
+
+		span {
+			position: absolute;
+			bottom: 0;
+			padding: 10px 5%;
+			width: 90%;
+			background: rgba(0, 0, 0, 0.6);
+		}
+
+		strong {
+			display: block;
+			margin-bottom: $STD_DISTANCE / 2;
+			font-size: 1.4em;
+			font-weight: normal;
+			line-height: 1em;
+		}
+	}
+}
+
+/**
+* Sidebar
+**/
+/** Category list **/
+.category-list {
+	a {
+		text-transform: capitalize;
+	}
+}
+
+/**
+* Footer
+**/
+#footer {
+	padding-top: $STD_DISTANCE;
+	border-top: 1px solid $MED_GREY;
+	text-align: right;
 }
 
 /** SMALL SCREEN **/

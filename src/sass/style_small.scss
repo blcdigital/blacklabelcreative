@@ -1,16 +1,35 @@
 /**
-* HTML/CSS/JS Template
+* blacklabelcreative.com
 *
 * @info		480px and up styling
-* @version	0.3.2
+* @version	0.0.1
 * @author	Jasal Vadgama - http://blacklabelcreative.com/
 **/
 
 /**
 * Imports
 **/
+/** SASS **/
 @import 'src/sass/partials/_variables.scss';
+@import 'src/sass/partials/_mixins.scss';
 
 /**
 * General
 **/
+
+/**
+* Portfolio
+**/
+/** Latest work **/
+.latest-work {
+	li {
+		float: left;
+		margin: 0 0 0 3%;
+		width: 31%;
+		height: auto;
+
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+}

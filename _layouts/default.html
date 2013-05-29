@@ -1,13 +1,13 @@
 {% include document_head.html %}
 
-<body class="{{ page.title }}">
+<body class="{{ page.title | replace: ' ', '-' }}">
 
-{% include header.html %}
+<div id="pageWrapper">
+	{% include header.html %}
 
-<div id="content">
 	{{ content }}
-</div>
 
-{% include sidebar.html %}
+	{% include footer.html %}
+</div>
 
 {% include document_foot.html %}

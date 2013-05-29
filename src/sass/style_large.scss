@@ -1,16 +1,63 @@
 /**
-* HTML/CSS/JS Template
+* blacklabelcreative.com
 *
 * @info		Full width styling
-* @version	0.3.2
+* @version	0.0.1
 * @author	Jasal Vadgama - http://blacklabelcreative.com/
 **/
 
 /**
 * Imports
 **/
+/** SASS **/
 @import 'src/sass/partials/_variables.scss';
+@import 'src/sass/partials/_mixins.scss';
 
 /**
 * General
 **/
+
+/**
+* Containers
+**/
+#pageWrapper {
+	margin: 0 auto;
+	width: 920px;
+}
+
+#content {
+	display: inline-block;
+	width: 680px;
+	border-right: 1px solid $MED_GREY;
+}
+
+#sidebar {
+	display: inline-block;
+	padding-top: $STD_DISTANCE / 2;
+	padding-left: 15px;
+	width: 215px;
+	vertical-align: top;
+
+	h2:first-child {
+		margin-top: 0;
+	}
+}
+
+/**
+* Posts
+**/
+/** Post **/
+.post {
+	aside {
+		width: 21.5%;
+	}
+
+	.post-content {
+		padding-right: 2.5%;
+		border-left: 1px solid $MED_GREY;
+	}
+}
+.more-posts {
+	padding-right: 2.5%;
+	border: 0;
+}
