@@ -62,15 +62,19 @@ module.exports = function(grunt) {
 				}
 			}
 		},
-		watch: {
-			jekyll: {
+		copy: {
+			main: {
 				files: [
-					'index.html',
-					'_*/*.html',
-					'*/*.md'
-				],
-				tasks: 'jekyll'
-			},
+					{
+						expand: true,
+						cwd: 'src/images/',
+						src: ['**'],
+						dest: 'deploy/assets/images/'
+					}
+				]
+			}
+		},
+		watch: {
 			sass: {
 				files: ['src/sass/**/*.scss'],
 				tasks: 'sass'
@@ -83,6 +87,7 @@ module.exports = function(grunt) {
 	});
 
 	// Load tasks
+	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-sass');
@@ -91,7 +96,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-jekyll');
 
 	// Default task(s)
-	grunt.registerTask('default', ['sass', 'cssmin', 'jshint', 'uglify']);
+	grunt.registerTask('default', ['jekyll', 'sass', 'cssmin', 'jshint', 'uglify', 'copy']);
 	grunt.registerTask('test', ['jshint']);
-	grunt.registerTask('deploy', ['jekyll', 'sass', 'cssmin', 'uglify']);
+	grunt.registerTask('deploy', ['jekyll', 'sass', 'cssmin', 'uglify', 'copy']);
 };
