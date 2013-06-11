@@ -30,35 +30,15 @@ type: home
 
 <h1>Latest from the blog</h1>
 <section id="content">
-	{% for post in site.posts limit:1 %}
-		<article class="post">
-			<aside>
-				<p><time pubdate="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_long_string }}</time></p>
-				<p><b>Posted in:</b> <a href="">{{ post.category }}</a></p>
-				<dl>
-					<dt>Tagged:</dt>
-					{% for tag in post.tags %}
-						<dd><a href="/tag/{{ tag | replace: ' ', '-' }}">{{ tag }}</a></dd>
-					{% endfor %}
-				</dl>
-			</aside>
-			<div class="post-content">
-				<h1 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
-				{{ post.content }}
-				<p><a href="{{ post.url }}">See the comments &#8594;</a></p>
-			</div>
-		</article>
-	{% endfor %}
-
 	<section class="more-posts">
-		{% for post in site.posts limit:4 offset:1 %}
+		{% for post in site.posts limit:4 %}
 			<article class="post">
 				<h1 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
 				<div class="body">{{ post.excerpt }}</div>
 				<p><a href="{{ post.url }}">Continue reading &rarr;</a></p>
 			</article>
-		{% endfor %}
-	</section>
+	{% endfor %}
+</section>
 </section>
 
 {% include sidebar.html %}

@@ -1,32 +1,39 @@
 ---
-layout: default
+layout: blog
 type: blog
 ---
 
-<h1>Blog</h1>
-
-{% for post in site.posts limit:1 %}
-	<div class="content">
-		<div class="post">
+<!-- This loops through the paginated posts -->
+{% for post in paginator.posts %}
+	<article class="post">
+		<aside>
+			<p><time pubdate="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_long_string }}</time></p>
+			<p><b>Posted in:</b> <a href="">{{ post.category }}</a></p>
+			<dl>
+				<dt>Tagged:</dt>
+				{% for tag in post.tags %}
+					<dd><a href="/tag/{{ tag | replace: ' ', '-' }}">{{ tag }}</a></dd>
+				{% endfor %}
+			</dl>
+		</aside>
+		<div class="post-content">
 			<h1 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
-			<time datetime="{{ post.date | date_to_xmlschema }}">
-				{{ post.date | date_to_long_string }}
-			</time>
-			<div class="body">{{ post.content }}</div>
-			<p>{{ post.tags }}</p>
+			{{ post.excerpt }}
+			<p><a href="{{ post.url }}">Continue reading &#8594;</a></p>
 		</div>
-	</div>
+	</article>
 {% endfor %}
 
-{% for post in site.posts limit:10 offset:1 %}
-	<div class="content">
-		<div class="post">
-			<h1 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
-			<time datetime="{{ post.date | date_to_xmlschema }}">
-				{{ post.date | date_to_long_string }}
-			</time>
-			<div class="body">{{ post.excerpt }}</div>
-			<p>{{ post.tags }}</p>
-		</div>
-	</div>
-{% endfor %}
+<!-- Pagination links -->
+<div class="pagination">
+	{% if paginator.previous_page %}
+		{% if paginator.previous_page == 1 %}
+			<a class="previous-page" href="/blog/">&#8592; Newer</a>
+		{% else %}
+			<a class="previous-page" href="/blog/{{ paginator.previous_page }}">&#8592; Newer</a>
+		{% endif %}
+	{% endif %}
+	{% if paginator.next_page %}
+		<a class="next-page" href="/blog/{{ paginator.next_page }}">Older &#8594;</a>
+	{% endif %}
+</div>
