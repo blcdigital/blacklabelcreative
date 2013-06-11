@@ -6,7 +6,7 @@
 <head>
 	<meta charset="utf-8" />
 
-	<title>{% if page.title != 'home' %}{{ page.title }} &mdash; {% endif %}black label creative</title>
+	<title>{% if page.title %}{{ page.title }} &mdash; {% endif %}black label creative</title>
 	<script>
 		// set js enabled class - replaces 'no-js' with 'js'
 		document.documentElement.className = document.documentElement.className.replace(/(\s|^)no-js(\s|$)/, '$1' + 'js' + '$2');

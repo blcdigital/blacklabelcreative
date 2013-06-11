@@ -1,6 +1,6 @@
 ---
 layout: default
-title: home
+type: home
 ---
 
 <section class="latest-work">
@@ -10,36 +10,26 @@ title: home
 		<li>
 			<a href="http://blacklabelcreative.com/portfolio/bt-flat-6-campaign/" title="BT Flat 6 Campaign">
 				<img src="http://blacklabelcreative.com/wp-content/uploads/2012/12/bt-flat6-home-300x300.jpg" alt="">
-				<span>
-					<strong>BT Flat 6 Campaign</strong>
-					<em>View project →</em>
-				</span>
+				<strong>BT Flat 6 Campaign</strong>
 			</a>
 		</li>
 		<li>
 			<a href="http://blacklabelcreative.com/portfolio/bt-consumer/" title="BT Consumer">
 				<img src="http://blacklabelcreative.com/wp-content/uploads/2012/09/bt-consumer-home-300x300.jpg" alt="">
-				<span>
-					<strong>BT Consumer</strong>
-					<em>View project →</em>
-				</span>
+				<strong>BT Consumer</strong>
 			</a>
 		</li>
 		<li>
 			<a href="http://blacklabelcreative.com/portfolio/riverway-studios/" title="Riverway Studios">
 				<img src="http://blacklabelcreative.com/wp-content/uploads/2012/09/riverway-home-300x300.jpg" alt="">
-				<span>
-					<strong>Riverway Studios</strong>
-					<em>View project →</em>
-				</span>
+				<strong>Riverway Studios</strong>
 			</a>
 		</li>
 	</ul>
 </section>
 
+<h1>Latest from the blog</h1>
 <section id="content">
-	<h1>Latest from the blog</h1>
-
 	{% for post in site.posts limit:1 %}
 		<article class="post">
 			<aside>
@@ -55,6 +45,7 @@ title: home
 			<div class="post-content">
 				<h1 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
 				{{ post.content }}
+				<p><a href="{{ post.url }}">See the comments &#8594;</a></p>
 			</div>
 		</article>
 	{% endfor %}

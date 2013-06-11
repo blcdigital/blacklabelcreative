@@ -1,6 +1,6 @@
 {% include document_head.html %}
 
-<body class="{{ page.title | replace: ' ', '-' }}">
+<body class="{% if page.type %}{{ page.type | replace: ' ', '-' }}{% endif %}{% if page.category %} {{ page.category | replace: ' ', '-' }}{% endif %}">
 
 <div id="pageWrapper">
 	{% include header.html %}

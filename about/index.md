@@ -1,5 +1,7 @@
 ---
-layout: default
+layout: content
+title: About
+type: about
 ---
 
 # Hello, I’m Jasal

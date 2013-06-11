@@ -19,7 +19,7 @@
 * General
 **/
 body {
-	background: #fff;
+	background: #fff url(/assets/images/bg.jpg) fixed repeat;
 	color: $DARK_GREY;
 	font: 14px/1.2em Helvetica, Arial, sans-serif;
 	/* stop font size scalling on orientation change - ADD FULL FIX */
@@ -122,6 +122,11 @@ nav {
 		}
 	}
 }
+/** Active states **/
+.about .menu-about,
+.blog .menu-blog {
+	color: $DARK_GREY;
+}
 
 /**
 * Posts
@@ -174,7 +179,7 @@ nav {
 /** Latest work **/
 .latest-work {
 	ul {
-		margin-bottom: $STD_DISTANCE * 2;
+		margin-bottom: $STD_DISTANCE * 3;
 		margin-left: 0;
 		list-style: none;
 		overflow: hidden;
@@ -188,6 +193,7 @@ nav {
 		overflow: hidden;
 
 		a {
+			display: block;
 			color: #fff;
 
 			&:hover,
@@ -196,17 +202,12 @@ nav {
 			}
 		}
 
-		span {
+		strong {
 			position: absolute;
 			bottom: 0;
 			padding: 10px 5%;
 			width: 90%;
 			background: rgba(0, 0, 0, 0.6);
-		}
-
-		strong {
-			display: block;
-			margin-bottom: $STD_DISTANCE / 2;
 			font-size: 1.4em;
 			font-weight: normal;
 			line-height: 1em;
