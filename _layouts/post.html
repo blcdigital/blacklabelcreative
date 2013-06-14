@@ -1,11 +1,27 @@
-{% include document_head.html %}
+---
+layout: default
+type: blog post
+---
 
-{% include header.html %}
+<section id="content">
+	<article class="post">
+		<aside>
+			<p><time pubdate="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_long_string }}</time></p>
+			<p><b>Posted in:</b> <a href="">{{ page.category }}</a></p>
+			<dl>
+				<dt>Tagged:</dt>
+				{% for tag in page.tags %}
+					<dd><a href="/tag/{{ tag | replace: ' ', '-' }}">{{ tag }}</a></dd>
+				{% endfor %}
+			</dl>
+		</aside>
 
-<body class="blog post {% if page.category %}{{ page.category | replace: ' ', '-' }}{% endif %}">
+		<div class="post-content">
+			<h1>{{ page.title }}</h1>
 
-<div id="content">
-	{{ content }}
-</div>
+			{{ content }}
+		</div>
+	</article>
+</section>
 
-{% include document_foot.html %}
+{% include sidebar.html %}
