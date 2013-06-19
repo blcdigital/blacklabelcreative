@@ -73,3 +73,13 @@
 .pagination {
 	padding-bottom: 2em;
 }
+
+/**
+* Sidebar
+**/
+.widget {
+	float: none;
+	padding-left: 0;
+	margin-bottom: $STD_DISTANCE * 3;
+	width: auto;
+}

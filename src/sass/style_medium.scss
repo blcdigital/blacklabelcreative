@@ -65,3 +65,23 @@
 		}
 	}
 }
+
+/**
+* Sidebar
+**/
+.widget {
+	float: left;
+	padding-left: 5%;
+	width: 30%;
+
+	&:first-child {
+		padding-left: 0;
+	}
+}
+
+/**
+* Footer
+**/
+#footer {
+	clear: both;
+}

@@ -1,15 +1,15 @@
 <div id="sidebar">
-	<section class="widget category-list">
-		<h2>Categories</h2>
-		<ul>
-			{% for cat in site.categories %}
-				<li><a href="/category/{{ cat[0] | replace: ' ', '-' }}/">{{ cat[0] }}</a></li>
+	<section class="widget tag-cloud">
+		<h2>Tags</h2>
+		<p>
+			{% for tag in site.tags %}
+				<a href="/tag/{{ tag[0] | replace: ' ', '-' }}/">{{ tag[0] }}</a>
 			{% endfor %}
-		</ul>
+		</p>
 	</section>
 
 	<section class="widget category-list">
-		<h2>Tags</h2>
+		<h2>Categories</h2>
 		<ul>
 			{% for cat in site.categories %}
 				<li><a href="/category/{{ cat[0] | replace: ' ', '-' }}/">{{ cat[0] }}</a></li>

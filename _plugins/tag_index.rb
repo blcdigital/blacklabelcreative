@@ -22,16 +22,9 @@ module Jekyll
       if site.layouts.key? 'tag'
         dir = 'tag'
         site.tags.keys.each do |tag|
-          write_tag_index(site, File.join(dir, tag.gsub(' ', '-')), tag)
+          site.pages << TagIndex.new(site, site.source, File.join(dir, tag.gsub(' ', '-')), tag)
         end
       end
-    end
-
-    def write_tag_index(site, dir, tag)
-      index = TagIndex.new(site, site.source, dir, tag)
-      index.render(site.layouts, site.site_payload)
-      index.write(site.dest)
-      site.pages << index
     end
   end
 end
