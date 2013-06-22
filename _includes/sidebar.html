@@ -16,4 +16,39 @@
 			{% endfor %}
 		</ul>
 	</section>
+
+	<section class="widget archive-list">
+		<h2>Archive</h2>
+		<ul>
+			{% for post in site.posts %}
+				{% if post.next %}
+					{% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+					{% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
+					{% capture month %}{{ post.date | date: '%B' }}{% endcapture %}
+					{% capture nmonth %}{{ post.next.date | date: '%B' }}{% endcapture %}
+				{% endif %}
+
+				{% if forloop.first %}
+					<li>{{ post.date | date: '%Y' }}
+						<ul>
+							<li><a href="/{{ post.date | date: '%Y' }}/{{ post.date | date: '%m' }}/">{{ post.date | date: '%B' }}</a></li>
+				{% else %}
+					{% if year != nyear %}
+						</ul>
+					</li>
+					<li>{{ post.date | date: '%Y' }}
+						<ul>
+							<li><a href="/{{ post.date | date: '%Y' }}/{{ post.date | date: '%m' }}/">{{ post.date | date: '%B' }}</a></li>
+					{% elsif month != nmonth %}
+							<li><a href="/{{ post.date | date: '%Y' }}/{{ post.date | date: '%m' }}/">{{ post.date | date: '%B' }}</a></li>
+					{% endif %}
+				{% endif %}
+
+				{% if forloop.last %}
+						</ul>
+					</li>
+				{% endif %}
+			{% endfor %}
+		</ul>
+	</section>
 </div>

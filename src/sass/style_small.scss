@@ -33,3 +33,28 @@
 		}
 	}
 }
+
+/**
+* Sidebar
+**/
+#sidebar {
+	padding-bottom: $STD_DISTANCE * 2;
+	overflow: hidden;
+}
+/** Widgets **/
+.widget {
+	float: left;
+	padding-left: 5%;
+	width: 30%;
+
+	&:first-child {
+		padding-left: 0;
+	}
+}
+
+/**
+* Footer
+**/
+#footer {
+	clear: both;
+}
