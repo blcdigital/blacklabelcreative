@@ -10,7 +10,7 @@ module Jekyll
       self.read_yaml(File.join(base, '_layouts'), 'archive.html')
       self.data['period'] = period
       self.data['period_posts'] = posts
-      self.data['title'] = "Archive for #{period["month_name"]} - #{period["year"]}"
+      self.data['title'] = "Archive for #{period["month_name"]} #{period["year"]}"
     end
   end
 
