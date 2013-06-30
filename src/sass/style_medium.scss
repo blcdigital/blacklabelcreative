@@ -14,6 +14,11 @@
 /**
 * General
 **/
+.main-image {
+	img {
+		width: auto;
+	}
+}
 
 /**
 * Header
@@ -63,5 +68,12 @@
 		img {
 			width: 100%;
 		}
+	}
+}
+/** Portfolio item **/
+.portfolio-gallery {
+	li {
+		margin: 0 8px 8px 0;
+		width: auto;
 	}
 }

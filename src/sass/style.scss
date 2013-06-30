@@ -81,6 +81,14 @@ code {
 	color: $TERM_GREEN;
 	overflow: auto;
 }
+.main-image {
+	text-align: center;
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
 
 /**
 * Containers
@@ -215,6 +223,48 @@ nav {
 			font-weight: normal;
 			line-height: 1em;
 		}
+	}
+}
+/** Portfolio item **/
+.portfolio-item-meta {
+	margin-left: 0;
+	list-style: none;
+}
+.portfolio-gallery {
+	margin: $STD_DISTANCE * 2 0 0;
+	list-style: none;
+	overflow: hidden;
+
+	li {
+		float: left;
+		margin: 0 3% 10px 0;
+		width: 30%;
+	}
+
+	a {
+		display: block;
+		border: 1px solid $ORANGE;
+		overflow: hidden;
+
+		@include transition(border-color, 0.1s, ease-in-out);
+
+		&:hover,
+		&:focus {
+			border-color: darken($ORANGE, 15%);
+
+			img {
+				opacity: 0.6;
+			}
+		}
+	}
+
+	img {
+		float: left;
+		width: 100%;
+		height: auto;
+		opacity: 1;
+
+		@include transition(opacity, 0.1s, ease-in-out);
 	}
 }
 

@@ -3,7 +3,7 @@
 		<h2>Tags</h2>
 		<p>
 			{% for tag in site.tags %}
-				<a href="/tag/{{ tag[0] | replace: ' ', '-' }}/">{{ tag[0] }}</a>
+				<a href="/blog/tag/{{ tag[0] | replace: ' ', '-' }}/">{{ tag[0] }}</a>
 			{% endfor %}
 		</p>
 	</section>
@@ -12,7 +12,7 @@
 		<h2>Categories</h2>
 		<ul>
 			{% for cat in site.categories %}
-				<li><a href="/category/{{ cat[0] | replace: ' ', '-' }}/">{{ cat[0] }}</a></li>
+				<li><a href="/blog/category/{{ cat[0] | replace: ' ', '-' }}/">{{ cat[0] }}</a></li>
 			{% endfor %}
 		</ul>
 	</section>
@@ -31,16 +31,16 @@
 				{% if forloop.first %}
 					<li>{{ post.date | date: '%Y' }}
 						<ul>
-							<li><a href="/{{ post.date | date: '%Y' }}/{{ post.date | date: '%m' }}/">{{ post.date | date: '%B' }}</a></li>
+							<li><a href="/blog/{{ post.date | date: '%Y' }}/{{ post.date | date: '%m' }}/">{{ post.date | date: '%B' }}</a></li>
 				{% else %}
 					{% if year != nyear %}
 						</ul>
 					</li>
 					<li>{{ post.date | date: '%Y' }}
 						<ul>
-							<li><a href="/{{ post.date | date: '%Y' }}/{{ post.date | date: '%m' }}/">{{ post.date | date: '%B' }}</a></li>
+							<li><a href="/blog/{{ post.date | date: '%Y' }}/{{ post.date | date: '%m' }}/">{{ post.date | date: '%B' }}</a></li>
 					{% elsif month != nmonth %}
-							<li><a href="/{{ post.date | date: '%Y' }}/{{ post.date | date: '%m' }}/">{{ post.date | date: '%B' }}</a></li>
+							<li><a href="/blog/{{ post.date | date: '%Y' }}/{{ post.date | date: '%m' }}/">{{ post.date | date: '%B' }}</a></li>
 					{% endif %}
 				{% endif %}
 

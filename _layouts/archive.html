@@ -3,7 +3,7 @@ layout: default
 ---
 
 <section id="content">
-	<h1 class="category">Archive for {{ page.period["month_name"] }} {{ page.period["year"] }}</h1>
+	<h1 class="category">{{ page.title }}</h1>
 	<section class="posts">
 		{% for post in page.period_posts %}
 			<article class="post">

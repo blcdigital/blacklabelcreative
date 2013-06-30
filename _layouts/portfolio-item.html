@@ -1,0 +1,32 @@
+---
+layout: default
+type: portfolio
+---
+
+<section id="content">
+	<article>
+		<h1>{{ page.title }}</h1>
+
+		<p class="main-image">
+			<img alt="{{ page.title }}" src="/assets/images/portfolio/{{ page.path | replace: 'portfolio/', '' | replace: '/index.md', '' }}/{{ page.gallery | first }}.jpg" />
+		</p>
+
+		<ul class="portfolio-item-meta">
+			<li><b>Client</b>: {{ page.client }}</li>
+			<li><b>URL</b>: <a class="new-window" href="{{ page.link }}" title="View the project">{{ page.link }}</a></li>
+			<li><b>Technologies</b>: {{ page.technology }}</li>
+		</ul>
+
+		{{ content }}
+
+		<aside>
+			<ul class="portfolio-gallery">
+				{% for item in page.gallery %}
+					<li><a href="/assets/images/portfolio/{{ page.path | replace: 'portfolio/', '' | replace: '/index.md', '' }}/{{ item }}.jpg" title="View larger image"><img alt="" src="/assets/images/portfolio/{{ page.path | replace: 'portfolio/', '' | replace: '/index.md', '' }}/{{ item }}-100x100.jpg" /></a></li>
+				{% endfor %}
+			</ul>
+		</aside>
+	</article>
+</section>
+
+{% include sidebar.html %}

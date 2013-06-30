@@ -33,6 +33,25 @@
 		}
 	}
 }
+/** Portfolio index **/
+.portfolio {
+	.latest-work {
+		li {
+			margin-bottom: $STD_DISTANCE;
+
+			&:nth-child(3n + 1) {
+				margin-left: 0;
+			}
+		}
+	}
+}
+/** Portfolio item **/
+.portfolio-gallery {
+	li {
+		margin: 0 3% 10px 0;
+		width: 22%;
+	}
+}
 
 /**
 * Sidebar

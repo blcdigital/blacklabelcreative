@@ -22,7 +22,7 @@ module Jekyll
 
     def generate(site)
       if site.layouts.key? 'category'
-        dir = site.config['category_dir'] || 'category'
+        dir = site.config['category_dir'] || 'blog/category'
         site.categories.keys.each do |category|
           site.pages << CategoryPage.new(site, site.source, File.join(dir, category.gsub(' ', '-')), category)
         end

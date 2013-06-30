@@ -20,7 +20,7 @@ module Jekyll
 
     def generate(site)
       if site.layouts.key? 'tag'
-        dir = 'tag'
+        dir = 'blog/tag'
         site.tags.keys.each do |tag|
           site.pages << TagIndex.new(site, site.source, File.join(dir, tag.gsub(' ', '-')), tag)
         end
