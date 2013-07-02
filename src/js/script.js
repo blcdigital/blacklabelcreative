@@ -12,6 +12,13 @@ BLC.app = (function() {
 	return {
 		init: function() {
 			// DOM ready
+
+			// open social links in a new window
+			$(".social-links").find("ul").on("click", "a", function(e) {
+				e.preventDefault();
+
+				window.open($(this).attr("href"));
+			});
 		},
 		pageInit: function() {
 			// page load

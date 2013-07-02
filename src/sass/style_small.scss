@@ -69,6 +69,11 @@
 	&:first-child {
 		padding-left: 0;
 	}
+
+	&.social-links {
+		padding-left: 0;
+		width: 100%;
+	}
 }
 
 /**
