@@ -11,7 +11,7 @@ type: blog post
 			<dl>
 				<dt>Tagged:</dt>
 				{% for tag in page.tags %}
-					<dd><a href="/tag/{{ tag | replace: ' ', '-' }}">{{ tag }}</a></dd>
+					<dd><a href="/blog/tag/{{ tag | replace: ' ', '-' }}">{{ tag }}</a></dd>
 				{% endfor %}
 			</dl>
 		</aside>
