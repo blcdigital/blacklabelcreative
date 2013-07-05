@@ -16,7 +16,7 @@ By day I am employed full-time at [The Grand Union](http://thegrandunion.com/) i
 
 black label creative is my portfolio, code playground and along with twitter, my geeky outlet on the web. Any cool stuff I find will no doubt end up here. I’ll also be adding things about my other passions in life: astrophysics, technology and cars.
 
-The site has been built with HTML5, progressively enhanced CSS3 and some extra interactions courtesy of jQuery all on top of a WordPress base. The logo has been designed by Karl Kisala and the social icons are Simple & Elegant available from Elegant Themes.
+The site has been built with HTML5, progressively enhanced CSS3 and some extra interactions courtesy of jQuery all on top of a WordPress base. The logo has been designed by Karl Kisala and the social icons are Webicons by [Fairhead Creative](http://fairheadcreative.com).
 Disclaimer: All opinions expressed here are my own and not of my employer.
 
 ## Getting in touch

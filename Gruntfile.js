@@ -13,8 +13,8 @@ module.exports = function(grunt) {
 		sass: {
 			dev: {
 				files: {
-					'deploy/assets/css/style.css': 'src/sass/style.scss',
-					'deploy/assets/css/ie.css' : [
+					'deploy/assets/css/style.min.css': 'src/sass/style.scss',
+					'deploy/assets/css/ie.min.css' : [
 						'src/sass/style_small.scss',
 						'src/sass/style_medium.scss',
 						'src/sass/style_large.scss'
@@ -25,8 +25,8 @@ module.exports = function(grunt) {
 		cssmin: {
 			compress: {
 				files: {
-					'deploy/assets/css/style.min.css': ['deploy/assets/css/style.css'],
-					'deploy/assets/css/ie.min.css': ['deploy/assets/css/ie.css']
+					'deploy/assets/css/style.min.css': ['deploy/assets/css/style.min.css'],
+					'deploy/assets/css/ie.min.css': ['deploy/assets/css/ie.min.css']
 				}
 			}
 		},

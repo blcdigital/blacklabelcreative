@@ -175,6 +175,12 @@ nav {
 		padding-left: 2.5%;
 		width: 70%;
 		border-left: 1px solid $MED_GREY;
+
+		aside {
+			margin-top: $STD_DISTANCE;
+			padding-left: 0;
+			width: 100%;
+		}
 	}
 }
 /** More posts (homepage) **/

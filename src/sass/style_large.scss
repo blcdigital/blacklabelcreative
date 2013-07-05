@@ -27,13 +27,16 @@
 
 #content {
 	display: inline-block;
-	padding-right: 15px;
-	width: 665px;
+	width: 680px;
 	border-right: 1px solid $MED_GREY;
 }
 .home #content {
 	padding-right: 0;
-	width: 680px;
+}
+.about #content,
+.portfolio #content {
+	padding-right: 15px;
+	width: 665px;
 }
 
 #sidebar {
@@ -86,4 +89,10 @@
 	padding-left: 0;
 	margin-bottom: $STD_DISTANCE * 3;
 	width: auto;
+}
+.home .social-links,
+.about .social-links {
+	clear: both;
+	padding-left: 0;
+	width: 100%;
 }
