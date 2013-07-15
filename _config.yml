@@ -4,7 +4,8 @@ exclude: [
     'node_modules',
     'src',
     'Gruntfile.js',
-    'package.json'
+    'package.json',
+    'README.md'
 ]
 keep_files:  ['.git', '.svn', 'assets']
 permalink : /blog/:year/:month/:title
