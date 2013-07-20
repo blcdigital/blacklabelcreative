@@ -6,10 +6,11 @@ var BLC = BLC || {};
 BLC.app = (function() {
 	var
 		// PRIVATE VARIABLES
-		largeScreenWidth = 959,
-		windowWidth,
+		$window = $(window),
 		$content = $("#content"),
 		$sidebar = $("#sidebar"),
+		largeScreenWidth = 959,
+		windowWidth, windowHeight,
 
 		// PRIVATE FUNCTIONS
 		equaliseColumns = function() {
@@ -29,6 +30,35 @@ BLC.app = (function() {
 					height: "auto"
 				});
 			}
+		},
+		lightbox = function(images) {
+			var $overlay = $("<div id='lightboxOverlay' />").on("click", function() {
+					$overlay.fadeOut(function() {
+						$overlay.detach();
+					});
+					$container.fadeOut(function() {
+						$container.remove();
+					});
+				}),
+				$container = $("<div id='lightboxContainer'><div /></div>");
+
+			// bind gallery click
+			$(".portfolio-gallery").on("click", "a", function(e) {
+				e.preventDefault();
+
+				// load the img
+				$container.find("div").html("<img alt='' src='" + $(e.currentTarget).attr("href") + "' />");
+				$container.find("img").load(function() {
+					$overlay.appendTo($("body")).css({
+						width: windowWidth,
+						height: windowHeight
+					}).fadeIn();
+					$container.appendTo($("body")).css({
+						marginTop: -($container.outerHeight() / 2),
+						marginLeft: -($container.outerWidth() / 2)
+					}).fadeIn();
+				});
+			});
 		};
 
 	// PUBLIC METHODS
@@ -43,8 +73,13 @@ BLC.app = (function() {
 				window.open($(this).attr("href"));
 			});
 
+			// start lightbox
+			if ($(".portfolio-gallery").length) {
+				lightbox($(".portfolio-gallery"));
+			}
+
 			// init the resize listener
-			$(window).on("resize", function() {
+			$window.on("resize", function() {
 				BLC.app.resizeListener();
 			});
 		},
@@ -56,7 +91,8 @@ BLC.app = (function() {
 		},
 		resizeListener: function() {
 			// update vars on resize
-			windowWidth = $(window).width();
+			windowWidth = $window.width();
+			windowHeight = $window.height();
 
 			// resize the content
 			equaliseColumns();
