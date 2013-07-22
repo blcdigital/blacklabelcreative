@@ -33,31 +33,46 @@ BLC.app = (function() {
 		},
 		lightbox = function(images) {
 			var $overlay = $("<div id='lightboxOverlay' />").on("click", function() {
-					$overlay.fadeOut(function() {
+					closeOverlay();
+				}),
+				$container = $("<div id='lightboxContainer'><div /><a class='close' href='#'>Close</a></div>"),
+				closeOverlay = function() {
+					$overlay.fadeOut(350, function() {
 						$overlay.detach();
 					});
-					$container.fadeOut(function() {
-						$container.remove();
+					$container.fadeOut(300, function() {
+						$container.detach();
 					});
-				}),
-				$container = $("<div id='lightboxContainer'><div /></div>");
+				},
+				loadImage = function(imagePath) {
+					// load the img
+					$container.find("div").html("<img alt='' src='" + imagePath + "' />");
+					$container.find("img").load(function() {
+						$overlay.appendTo($("body")).css({
+							width: windowWidth,
+							height: windowHeight
+						}).fadeIn(300);
+						$container.appendTo($("body")).css({
+							marginTop: -($container.outerHeight() / 2),
+							marginLeft: -($container.outerWidth() / 2)
+						}).fadeIn(350);
+					});
+				},
+				updateImage = function() {
+
+				};
+
+			$container.find(".close").on("click", function(e) {
+				e.preventDefault();
+
+				closeOverlay();
+			});
 
 			// bind gallery click
 			$(".portfolio-gallery").on("click", "a", function(e) {
 				e.preventDefault();
 
-				// load the img
-				$container.find("div").html("<img alt='' src='" + $(e.currentTarget).attr("href") + "' />");
-				$container.find("img").load(function() {
-					$overlay.appendTo($("body")).css({
-						width: windowWidth,
-						height: windowHeight
-					}).fadeIn();
-					$container.appendTo($("body")).css({
-						marginTop: -($container.outerHeight() / 2),
-						marginLeft: -($container.outerWidth() / 2)
-					}).fadeIn();
-				});
+				loadImage($(e.currentTarget).attr("href"));
 			});
 		};
 

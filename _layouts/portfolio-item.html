@@ -20,9 +20,9 @@ type: portfolio
 		{{ content }}
 
 		<aside>
-			<ul class="portfolio-gallery">
+			<ul class="gallery portfolio-gallery">
 				{% for item in page.gallery %}
-					<li><a href="/assets/images/portfolio/{{ page.path | replace: 'portfolio/', '' | replace: '/index.md', '' }}/{{ item }}.jpg" title="View larger image"><img alt="" src="/assets/images/portfolio/{{ page.path | replace: 'portfolio/', '' | replace: '/index.md', '' }}/{{ item }}-100x100.jpg" /></a></li>
+					<li><a href="/assets/images/portfolio/{{ page.path | replace: 'portfolio/', '' | replace: '/index.md', '' }}/{{ item }}.jpg" rel="gallery" title="View larger image"><img alt="" src="/assets/images/portfolio/{{ page.path | replace: 'portfolio/', '' | replace: '/index.md', '' }}/{{ item }}-100x100.jpg" /></a></li>
 				{% endfor %}
 			</ul>
 		</aside>
