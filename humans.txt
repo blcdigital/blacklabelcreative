@@ -1,0 +1,11 @@
+/* TEAM */
+Developer/Designer: Jasal Vadgama
+Contact: jasal@blacklabelcreative.com
+Twitter: @donofkarma
+Location: London, UK
+
+/* SITE */
+Last update: 2013/07/28
+Standards: HTML5, CSS3,..
+Components: jQuery, iOS Oreintation Change
+Software: SublimeText 2, Jekyll, Grunt
