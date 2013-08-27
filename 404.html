@@ -3,8 +3,24 @@ layout: default
 type: error 404
 ---
 
-<section>
-	<h1>Page not found</h1>
+<section class="error-page">
+	<h1>404 Error - Page Not Found</h1>
 
-	<p>Oops.</p>
+	<p>It looks like we can't find what you are looking for. But don't worry, all is not lost! Here are a couple of things you can try:</p>
+
+	<ul>
+		<li>If you typed in the URL, make sure you got it right.</li>
+		<li>If you came here from another page, you can <a href="mailto:jasal@blacklabelcreative.com?subject=There is a broken link!">report a broken link</a>.</li>
+		<li>Or, you can check out some of these articles:</li>
+	</ul>
+
+	<section class="more-posts">
+		{% for post in site.posts limit:4 %}
+			<article class="post">
+				<h2 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+				<div class="body">{{ post.excerpt }}</div>
+				<p><a href="{{ post.url }}">Continue reading &rarr;</a></p>
+			</article>
+		{% endfor %}
+	</section>
 </section>
