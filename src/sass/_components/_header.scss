@@ -1,0 +1,71 @@
+/**
+* Header
+**/
+
+#header {
+    background: url(/assets/images/london.jpg) center no-repeat;
+    background-size: cover;
+    text-align: center;
+    overflow: hidden;
+
+    @include modular-mq(small) {
+        text-align: left;
+    }
+
+    .content-wrapper {
+        height: 600px;
+    }
+
+    .logo {
+        @include modular-mq(small) {
+            float: left;
+            padding-left: $gutter;
+        }
+    }
+
+    .more-link {
+        position: absolute;
+        bottom: 10px;
+        margin-left: $gutter*-1;
+        width: 100%;
+    }
+}
+
+#nav {
+    @include modular-mq(small) {
+        float: right;
+        padding-top: 87px;
+        padding-right: $gutter;
+    }
+
+    @include modular-mq(medium) {
+        padding-top: 85px;
+        font-size: 1.2em;
+    }
+
+    ul {
+        text-transform: uppercase;
+    }
+
+    li {
+        display: inline-block;
+        padding: $gutter $gutter/2 0;
+    }
+
+    a {
+        display: block;
+        padding: $gutter 0;
+        color: $grey_dark;
+        border-bottom: 2px solid transparent;
+
+        @include transition(border-color, 0.25s, ease-in);
+
+        &:hover,
+        &:focus {
+            text-decoration: none;
+            border-bottom: 2px solid $orange;
+
+            @include transition(border-color, 0.25s, ease-out);
+        }
+    }
+}

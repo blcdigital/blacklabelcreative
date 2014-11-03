@@ -1,0 +1,13 @@
+/**
+* Contact
+**/
+
+#contact {
+    li {
+        display: inline-block;
+
+        & + li {
+            padding-left: $gutter/2;
+        }
+    }
+}

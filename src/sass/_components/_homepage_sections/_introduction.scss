@@ -1,0 +1,34 @@
+/**
+* Introduction
+**/
+
+.introduction {
+    position: absolute;
+    top: 38%;
+    margin-left: $gutter*-1;
+    width: 100%;
+    text-align: center;
+
+    @include modular-mq(large) {
+        margin-left: 0;
+        width: 960px;
+    }
+
+    h1 {
+        font-size: 2em;
+        font-weight: normal;
+        line-height: 1.2em;
+
+        @include modular-mq(medium) {
+            font-size: 3em;
+        }
+    }
+
+    p {
+        font-size: 1.2em;
+
+        @include modular-mq(medium) {
+            font-size: 1.4em;
+        }
+    }
+}

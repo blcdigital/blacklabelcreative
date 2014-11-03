@@ -1,0 +1,24 @@
+/**
+* Variables
+**/
+
+// File paths
+$fonts: "/assets/fonts/";
+$images: "/assets/images/";
+
+// Media Queries
+$smallScreen: 575px;
+$mediumScreen: 767px;
+$largeScreen: 959px;
+$isOldIE: false !default;
+
+// Colours
+$black: #000;
+$blue: #3299bb;
+$grey_dark: #333;
+$grey_med: #bcbcbc;
+$orange: #ff9900;
+$white: #efefef;
+
+// Spacing
+$gutter: 10px;

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]>      <html lang="en-gb" class="no-js lt-ie9"> <![endif]-->
+<!--[if IE 9]><!-->    <html lang="en-gb" class="no-js ie9"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+
+    <title>{% if page.title %}{{ page.title }} &mdash; {% endif %}black label creative</title>
+    <script>
+        // set js enabled class - replaces 'no-js' with 'js'
+        document.documentElement.className = document.documentElement.className.replace(/(\s|^)no-js(\s|$)/, '$1' + 'js' + '$2');
+    </script>
+
+    <!-- browser settings -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <!-- stylesheets -->
+    <link href="/assets/css/style.css" media="screen" rel="stylesheet" />
+    <!-- add all stylesheets and html5shim to <IE9 -->
+    <!--[if lt IE 9]>
+        <link href="/assets/css/ie.css" media="screen" rel="stylesheet" />
+
+        <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <script>
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-1627709-4']);
+        _gaq.push(['_setDomainName', 'blacklabelcreative.com']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</head>

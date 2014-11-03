@@ -1,0 +1,23 @@
+/**
+* About
+**/
+
+#about {
+    h2 {
+        text-align: left;
+    }
+
+    a {
+        color: $blue;
+    }
+
+    .more-link a:hover,
+    .more-link a:focus {
+        background: $blue;
+        color: $grey_dark;
+    }
+
+    .avatar-image {
+        text-align: center;
+    }
+}

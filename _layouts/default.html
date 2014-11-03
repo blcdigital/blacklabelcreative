@@ -1,0 +1,11 @@
+{% include document_head.html %}
+
+<body class="{% if page.type %}{{ page.type | replace: ' ', '-' }}{% endif %}{% if page.category %} {{ page.category | replace: ' ', '-' }}{% endif %}">
+
+{% include header.html %}
+
+{{ content }}
+
+{% include footer.html %}
+
+{% include document_foot.html %}
