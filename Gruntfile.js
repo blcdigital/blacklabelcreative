@@ -14,6 +14,9 @@ module.exports = function(grunt) {
         },
         cssmin: {
             main: {
+                options: {
+                    keepSpecialComments: 0
+                },
                 files: {
                     '_site/assets/css/style.css': ['_site/assets/css/style.css'],
                     '_site/assets/css/ie.css': ['_site/assets/css/ie.css']

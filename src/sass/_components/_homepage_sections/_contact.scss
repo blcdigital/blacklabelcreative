@@ -3,6 +3,14 @@
 **/
 
 #contact {
+    .content-wrapper {
+        padding: $gutter*3 10px;
+
+        @include modular-mq(large) {
+            padding: $gutter*7 0 $gutter*6;
+        }
+    }
+
     li {
         display: inline-block;
 
