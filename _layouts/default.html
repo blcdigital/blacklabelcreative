@@ -2,9 +2,15 @@
 
 <body class="{% if page.type %}{{ page.type | replace: ' ', '-' }}{% endif %}{% if page.category %} {{ page.category | replace: ' ', '-' }}{% endif %}">
 
-{% include header.html %}
+{% if page.type == "home" %}
+    {% include home_header.html %}
+{% else %}
+    {% include header.html %}
+{% endif %}
 
-{{ content }}
+<div id="content">
+    {{ content }}
+</div>
 
 {% include footer.html %}
 

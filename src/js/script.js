@@ -6,7 +6,7 @@ var BLC = BLC || {};
 BLC = (function() {
     // PRIVATE VARIABLES
     var
-        $introduction = $('#header').find('.content-wrapper'),
+        $introduction = $('.home').find('#header .content-wrapper'),
 
     // PRIVATE FUNCTIONS
         setIntroHeight = function() {

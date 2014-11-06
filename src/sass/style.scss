@@ -10,8 +10,11 @@
 @import "_components/header";
 @import "_components/footer";
 
-// Pages
+// Homepage sections
 @import "_components/_homepage_sections/introduction";
 @import "_components/_homepage_sections/about";
 @import "_components/_homepage_sections/portfolio";
 @import "_components/_homepage_sections/contact";
+
+// Pages
+@import "_pages/blog";

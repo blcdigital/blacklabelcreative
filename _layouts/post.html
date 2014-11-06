@@ -3,21 +3,17 @@ layout: default
 type: blog post
 ---
 
-<section id="content">
+<div class="content-wrapper">
     <article class="post">
-        <aside>
-            <p><time pubdate="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_long_string }}</time></p>
-            <p><b>Posted in:</b> <a href="">{{ page.category }}</a></p>
-        </aside>
+        <h1>{{ page.title }}</h1>
+        <p class="meta"><time pubdate="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_long_string }}</time> | Posted in: <a href="/blog/category/{{ page.category | replace: ' ', '-' }}/">{{ page.category }}</a></p>
 
         <div class="post-content">
-            <h1>{{ page.title }}</h1>
-
             {{ content }}
 
             <aside>
                 <div id="disqus_thread"></div>
-                <script type="text/javascript">
+                <script>
                     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
                     var disqus_shortname = 'blacklabelcreative'; // required: replace example with your forum shortname
 
@@ -33,4 +29,4 @@ type: blog post
             </aside>
         </div>
     </article>
-</section>
+</div>

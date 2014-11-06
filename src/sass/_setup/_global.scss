@@ -29,6 +29,7 @@ body {
 
 
 // Headings
+h1,
 h2,
 h3 {
     margin-bottom: 1.4em;
@@ -39,6 +40,14 @@ h3 {
 
     @include modular-mq(medium) {
         font-size: 2.2em;
+    }
+}
+h1 {
+    font-size: 2em;
+    line-height: 1.2em;
+
+    @include modular-mq(medium) {
+        font-size: 2.6em;
     }
 }
 h3 {
