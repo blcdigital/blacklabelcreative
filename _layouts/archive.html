@@ -1,0 +1,17 @@
+---
+layout: default
+type: blog archive
+---
+
+<section class="content-wrapper">
+    <h1>{{ page.title }}</h1>
+
+    <ul class="post-list">
+        {% for post in page.period_posts %}
+            <li>
+                <time pubdate="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %b %y" }}</time>
+                <a href="{{ post.url }}">{{ post.title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</section>
