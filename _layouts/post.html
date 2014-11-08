@@ -3,7 +3,7 @@ layout: default
 type: blog post
 ---
 
-<div class="content-wrapper">
+<section class="content-wrapper">
     <article class="post">
         <h1>{{ page.title }}</h1>
         <p class="meta"><time pubdate="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_long_string }}</time> | Posted in: <a href="/blog/category/{{ page.category | replace: ' ', '-' }}/">{{ page.category }}</a></p>
@@ -12,6 +12,7 @@ type: blog post
             {{ content }}
 
             <aside>
+                <h2>Comments</h2>
                 <div id="disqus_thread"></div>
                 <script>
                     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
@@ -29,4 +30,4 @@ type: blog post
             </aside>
         </div>
     </article>
-</div>
+</section>

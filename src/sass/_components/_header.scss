@@ -3,12 +3,16 @@
 **/
 
 #header {
-    margin-bottom: 2em;
+    margin-bottom: 1em;
     text-align: center;
     overflow: hidden;
 
     @include modular-mq(small) {
         text-align: left;
+    }
+
+    @include modular-mq(medium) {
+        margin-bottom: 2em;
     }
 
     .logo {
@@ -20,6 +24,7 @@
     .more-link {
         position: absolute;
         bottom: 10px;
+        left: 0;
         width: 100%;
     }
 }
@@ -36,6 +41,7 @@
     }
 
     ul {
+        margin-left: 0;
         text-transform: uppercase;
     }
 

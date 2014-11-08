@@ -10,7 +10,11 @@ BLC = (function() {
 
     // PRIVATE FUNCTIONS
         setIntroHeight = function() {
-            $introduction.css('height', $(window).outerHeight());
+            if ($(window).outerHeight() < 500) {
+                $introduction.css('height', 500);
+            } else {
+                $introduction.css('height', $(window).outerHeight());
+            }
         }
     ;
 

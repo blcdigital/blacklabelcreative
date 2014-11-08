@@ -6,6 +6,7 @@
     margin: 0 auto 3.8em;
     width: 75%;
     font-size: 1.2em;
+    list-style: none;
 
     @include modular-mq(large) {
         width: 50%;
@@ -60,6 +61,15 @@
 
         a {
             color: $blue;
+        }
+    }
+
+    aside {
+        margin-top: 3.2em;
+        border-top: 1px solid $grey_med;
+
+        @include modular-mq(medium) {
+            margin-top: 4.6em;
         }
     }
 }

@@ -36,3 +36,12 @@ ErrorDocument 404 /404.html
 # 500
 ErrorDocument 500 /500.html
 # END ERROR PAGES
+
+# REDIRECTS
+Redirect 301 /about /
+Redirect 301 /portfolio/download-2011 /portfolio/download-festival/
+Redirect 301 /portfolio/download-2010 /portfolio/download-festival/
+Redirect 301 /portfolio/reading-leeds-2011 /portfolio/reading-leeds-festival/
+Redirect 301 /portfolio/reading-leeds-2011 /portfolio/reading-leeds-festival/
+Redirect 301 /portfolio/stickman-photographic /portfolio
+Redirect 301 /portfolio/scholl /portfolio
