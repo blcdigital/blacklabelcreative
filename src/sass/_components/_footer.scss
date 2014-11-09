@@ -7,6 +7,14 @@
     font-size: 0.85em;
     text-align: center;
 
+    @include modular-mq(small) {
+        font-size: 0.5em;
+    }
+
+    @include modular-mq(medium) {
+        font-size: 0.85em;
+    }
+
     p {
         margin: 0;
     }
