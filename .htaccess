@@ -38,7 +38,7 @@ ErrorDocument 500 /500.html
 # END ERROR PAGES
 
 # REDIRECTS
-Redirect 301 /about /
+Redirect 301 /about /#about
 Redirect 301 /portfolio/download-2011 /portfolio/download-festival/
 Redirect 301 /portfolio/download-2010 /portfolio/download-festival/
 Redirect 301 /portfolio/reading-leeds-2011 /portfolio/reading-leeds-festival/
