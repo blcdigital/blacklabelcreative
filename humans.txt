@@ -5,7 +5,7 @@ Twitter: @donofkarma
 Location: London, UK
 
 /* SITE */
-Last update: 2014/11/01
+Last update: 2015/03/26
 Standards: HTML, CSS
-Components: jQuery, iOS Orientation Change
+Components: jQuery, Hammer.js
 Software: SublimeText 3, Grunt, Jekyll
