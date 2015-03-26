@@ -112,6 +112,32 @@ module.exports = function(grunt) {
                 }]
             }
         },
+        'cache-busting': {
+            style: {
+                replace: ['_site/**/*.html'],
+                replacement: 'style.css',
+                file: '_site/assets/css/style.css',
+                get_param: true,
+            },
+            ie: {
+                replace: ['_site/**/*.html'],
+                replacement: 'ie.css',
+                file: '_site/assets/css/ie.css',
+                get_param: true,
+            },
+            libs: {
+                replace: ['_site/**/*.html'],
+                replacement: 'libs.js',
+                file: '_site/assets/js/libs.js',
+                get_param: true,
+            },
+            script: {
+                replace: ['_site/**/*.html'],
+                replacement: 'script.js',
+                file: '_site/assets/js/script.js',
+                get_param: true,
+            }
+        },
         watch: {
             fonts: {
                 files: ['src/fonts/**/*.*'],
@@ -133,6 +159,7 @@ module.exports = function(grunt) {
     });
 
     // Load tasks
+    grunt.loadNpmTasks('grunt-cache-busting');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
@@ -145,6 +172,6 @@ module.exports = function(grunt) {
     // Default task(s)
     grunt.registerTask('test', ['jshint']);
     grunt.registerTask('build', ['clean', 'sass', 'uglify:develop', 'copy']);
-    grunt.registerTask('deploy', ['build', 'cssmin', 'uglify:deploy', 'imagemin']);
+    grunt.registerTask('deploy', ['build', 'cssmin', 'uglify:deploy', 'imagemin', 'cache-busting']);
     grunt.registerTask('default', ['test', 'deploy']);
 };
