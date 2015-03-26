@@ -144,7 +144,7 @@ module.exports = function(grunt) {
 
     // Default task(s)
     grunt.registerTask('test', ['jshint']);
-    grunt.registerTask('build', ['clean', 'sass', 'cssmin', 'uglify:develop', 'copy']);
+    grunt.registerTask('build', ['clean', 'sass', 'uglify:develop', 'copy']);
     grunt.registerTask('deploy', ['build', 'cssmin', 'uglify:deploy', 'imagemin']);
     grunt.registerTask('default', ['test', 'deploy']);
 };
