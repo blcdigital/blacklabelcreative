@@ -1,6 +1,12 @@
 Changelog
 ---------------------
 
+### 3.1.0
+- Adding bower to handle JS dependencies
+- Swapping Sass Rubygem to libsass
+- Adding image compression, cache-busting to grunt deploy build
+- Adding cache-control headers
+
 ### 3.0.0
 - New design and page templates
 - New homepage

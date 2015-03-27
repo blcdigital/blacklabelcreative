@@ -2,6 +2,7 @@ destination: ./_site
 encoding: 'utf-8'
 exclude: [
     '.sass_cache',
+    'bower_components',
     'node_modules',
     'src',
     'CHANGELOG.md',

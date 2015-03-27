@@ -5,6 +5,9 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         sass: {
+            options: {
+                sourcemap: false
+            },
             main: {
                 files: {
                     '_site/assets/css/style.css': 'src/sass/style.scss',
@@ -14,9 +17,6 @@ module.exports = function(grunt) {
         },
         cssmin: {
             main: {
-                options: {
-                    keepSpecialComments: 0
-                },
                 files: {
                     '_site/assets/css/style.css': ['_site/assets/css/style.css'],
                     '_site/assets/css/ie.css': ['_site/assets/css/ie.css']
@@ -42,7 +42,7 @@ module.exports = function(grunt) {
             },
             all: [
                 'Gruntfile.js',
-                'src/js/script.js'
+                'src/js/**/*.js'
             ]
         },
         uglify: {
@@ -51,9 +51,23 @@ module.exports = function(grunt) {
                     except: ['jQuery']
                 }
             },
+            develop: {
+                options: {
+                    beautify: true,
+                    mangle: false
+                },
+                files: {
+                    '_site/assets/js/libs.js': [
+                        'bower_components/jquery/dist/jquery.min.js'
+                    ],
+                    '_site/assets/js/script.js': ['src/js/script.js']
+                }
+            },
             deploy: {
                 files: {
-                    '_site/assets/js/libs.js': ['src/js/libs/**/*.js'],
+                    '_site/assets/js/libs.js': [
+                        'bower_components/jquery/dist/jquery.min.js'
+                    ],
                     '_site/assets/js/script.js': ['src/js/script.js']
                 }
             }
@@ -88,6 +102,42 @@ module.exports = function(grunt) {
                 ]
             }
         },
+        imagemin: {
+            deploy: {
+                files: [{
+                    expand: true,
+                    cwd: '_site/assets/images/',
+                    src: ['**/*.{png,jpg,gif}'],
+                    dest: '_site/assets/images/'
+                }]
+            }
+        },
+        'cache-busting': {
+            style: {
+                replace: ['_site/**/*.html'],
+                replacement: 'style.css',
+                file: '_site/assets/css/style.css',
+                get_param: true,
+            },
+            ie: {
+                replace: ['_site/**/*.html'],
+                replacement: 'ie.css',
+                file: '_site/assets/css/ie.css',
+                get_param: true,
+            },
+            libs: {
+                replace: ['_site/**/*.html'],
+                replacement: 'libs.js',
+                file: '_site/assets/js/libs.js',
+                get_param: true,
+            },
+            script: {
+                replace: ['_site/**/*.html'],
+                replacement: 'script.js',
+                file: '_site/assets/js/script.js',
+                get_param: true,
+            }
+        },
         watch: {
             fonts: {
                 files: ['src/fonts/**/*.*'],
@@ -109,16 +159,19 @@ module.exports = function(grunt) {
     });
 
     // Load tasks
+    grunt.loadNpmTasks('grunt-cache-busting');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-sass');
 
     // Default task(s)
     grunt.registerTask('test', ['jshint']);
-    grunt.registerTask('build', ['clean', 'sass', 'cssmin', 'uglify', 'copy']);
-    grunt.registerTask('default', ['test', 'build']);
+    grunt.registerTask('build', ['clean', 'sass', 'uglify:develop', 'copy']);
+    grunt.registerTask('deploy', ['build', 'cssmin', 'uglify:deploy', 'imagemin', 'cache-busting']);
+    grunt.registerTask('default', ['test', 'deploy']);
 };
