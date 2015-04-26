@@ -17,4 +17,4 @@ I've left out any kind of wire framing as that'll get constantly changed as I de
 
 The way I build it will also be a new thing for me, as I'll be doing it live (sort of). Every time I finish a section, no matter how small, I'll add it immediately to the live site. This is so I can keep the development ticking over nicely and stay focused. Yes, there will no doubt be a couple of bugs that appear, although I'll do my best to limit this.
 
-With plan layed out, the only thing left is to start the process. No time like the present I guess!
+With a plan written out, the only thing left is to start the process. No time like the present I guess!

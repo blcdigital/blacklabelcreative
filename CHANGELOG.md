@@ -1,6 +1,12 @@
 Changelog
 ---------------------
 
+### 3.1.1
+- Adding favicons
+- Updating About copy
+- New post
+- Updating spelling mistakes
+
 ### 3.1.0
 - Adding bower to handle JS dependencies
 - Swapping Sass Rubygem to libsass

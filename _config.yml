@@ -5,6 +5,7 @@ exclude: [
     'bower_components',
     'node_modules',
     'src',
+    'bower.json',
     'CHANGELOG.md',
     'Gruntfile.js',
     'package.json',

@@ -48,6 +48,10 @@
     li {
         display: inline-block;
         padding: $gutter $gutter/2 0;
+
+        @include modular-mq(large) {
+            padding: $gutter 0 0 $gutter*3;
+        }
     }
 
     a {

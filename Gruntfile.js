@@ -81,6 +81,16 @@ module.exports = function(grunt) {
             }
         },
         copy: {
+            data: {
+                files: [
+                    {
+                        expand: true,
+                        cwd: 'src/data/',
+                        src: ['**'],
+                        dest: '_site/assets/data/'
+                    }
+                ]
+            },
             fonts: {
                 files: [
                     {
@@ -117,12 +127,6 @@ module.exports = function(grunt) {
                 replace: ['_site/**/*.html'],
                 replacement: 'style.css',
                 file: '_site/assets/css/style.css',
-                get_param: true,
-            },
-            ie: {
-                replace: ['_site/**/*.html'],
-                replacement: 'ie.css',
-                file: '_site/assets/css/ie.css',
                 get_param: true,
             },
             libs: {

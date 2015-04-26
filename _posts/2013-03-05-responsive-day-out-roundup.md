@@ -16,7 +16,7 @@ My favourite talks are listed below:
 
 **Anna Debenham: Playing with Games Console Browsers** - Going by some of the stats in the talk, game console browsers could be something that we may need to seriously cater for.
 
-**Andy Hume: The Anatomy of a Responsive Page Load** - Fairly self explanitory but some good advice how how to deal with lots of assets in a responsive context.
+**Andy Hume: The Anatomy of a Responsive Page Load** - Fairly self explanatory but some good advice how how to deal with lots of assets in a responsive context.
 
 Finally, **Owen Gregory: Antiphonal Geometry** looks at the relationship between device screen aspect ratios and musical intervals. Seems like coincidence to me but interesting nonetheless.
 
