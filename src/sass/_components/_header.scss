@@ -7,7 +7,7 @@
     text-align: center;
     overflow: hidden;
 
-    @include modular-mq(small) {
+    @include modular-mq(medium) {
         text-align: left;
     }
 
@@ -16,7 +16,7 @@
     }
 
     .logo {
-        @include modular-mq(small) {
+        @include modular-mq(medium) {
             float: left;
         }
     }
@@ -30,13 +30,9 @@
 }
 
 #nav {
-    @include modular-mq(small) {
+    @include modular-mq(medium) {
         float: right;
         padding-top: 87px;
-    }
-
-    @include modular-mq(medium) {
-        padding-top: 85px;
         font-size: 1.2em;
     }
 

@@ -128,7 +128,7 @@ blockquote {
 
 
 // Code
-code {
+pre code {
     display: block;
     margin-bottom: 1.4em;
     padding: 10px 15px;
@@ -168,4 +168,16 @@ code {
     &:focus {
         opacity: 1;
     }
+}
+
+
+// Alignment
+.align-center {
+    text-align: center;
+}
+img.align-center {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
 }
