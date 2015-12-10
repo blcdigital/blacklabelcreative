@@ -1,6 +1,11 @@
 Changelog
 ---------------------
 
+### 3.2.0
+- Updating packages
+- Updating Gruntfile.js
+- Updating SASS structure
+
 ### 3.1.1
 - Adding favicons
 - Updating About copy
