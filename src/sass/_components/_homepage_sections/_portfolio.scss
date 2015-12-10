@@ -131,14 +131,16 @@
 
     .description-content {
         position: relative;
+        top: 50%;
         font-size: 0.75em;
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
 
         @include modular-mq(medium) {
-            top: 50%;
             font-size: 1em;
-            -webkit-transform: translateY(-50%);
-            -ms-transform: translateY(-50%);
-            transform: translateY(-50%);
         }
     }
 }

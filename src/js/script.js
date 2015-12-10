@@ -1,6 +1,6 @@
-/*jslint eqeqeq: true, undef: true */
-/*global $, window, console, alert */
+"use strict";
 
+window.jQuery = window.$ = require('jquery');
 var BLC = BLC || {};
 
 BLC = (function() {

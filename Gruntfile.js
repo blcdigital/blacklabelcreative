@@ -1,83 +1,27 @@
-/*global module:false*/
-
 module.exports = function(grunt) {
-    // Project configuration
+    // Project configuration.
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-        sass: {
-            options: {
-                sourcemap: false
-            },
-            main: {
-                files: {
-                    '_site/assets/css/style.css': 'src/sass/style.scss',
-                    '_site/assets/css/ie.css' : 'src/sass/ie.scss'
-                }
-            }
-        },
-        cssmin: {
-            main: {
-                files: {
-                    '_site/assets/css/style.css': ['_site/assets/css/style.css'],
-                    '_site/assets/css/ie.css': ['_site/assets/css/ie.css']
-                }
-            }
-        },
-        jshint: {
-            options: {
-                curly: true,
-                eqeqeq: true,
-                immed: true,
-                latedef: true,
-                newcap: true,
-                noarg: true,
-                sub: true,
-                undef: true,
-                boss: true,
-                eqnull: true,
-                browser: true,
-                globals: {
-                    jQuery: true
-                }
-            },
-            all: [
-                'Gruntfile.js',
-                'src/js/**/*.js'
-            ]
-        },
-        uglify: {
-            options: {
-                mangle: {
-                    except: ['jQuery']
-                }
-            },
-            develop: {
-                options: {
-                    beautify: true,
-                    mangle: false
-                },
-                files: {
-                    '_site/assets/js/libs.js': [
-                        'bower_components/jquery/dist/jquery.min.js'
-                    ],
-                    '_site/assets/js/script.js': ['src/js/script.js']
-                }
-            },
-            deploy: {
-                files: {
-                    '_site/assets/js/libs.js': [
-                        'bower_components/jquery/dist/jquery.min.js'
-                    ],
-                    '_site/assets/js/script.js': ['src/js/script.js']
-                }
-            }
+        vars: {
+            buildDir: '_site',
+            cssBuildDir: '_site/assets/css',
+            dataBuildDir: '_site/assets/data',
+            fontsBuildDir: '_site/assets/fonts',
+            imagesBuildDir: '_site/assets/images',
+            scriptBuildDir: '_site/assets/js'
         },
         clean: {
             fonts: {
-                src: ['_site/assets/fonts/*']
+                src: ['<%= vars.fontsBuildDir %>']
             },
             images: {
-                src: ['_site/assets/images/*']
+                src: ['<%= vars.imagesBuildDir %>']
+            },
+            style: {
+                src: ['<%= vars.cssBuildDir %>']
+            },
+            script: {
+                src: ['<%= vars.scriptBuildDir %>']
             }
         },
         copy: {
@@ -87,7 +31,7 @@ module.exports = function(grunt) {
                         expand: true,
                         cwd: 'src/data/',
                         src: ['**'],
-                        dest: '_site/assets/data/'
+                        dest: '<%= vars.dataBuildDir %>'
                     }
                 ]
             },
@@ -97,7 +41,7 @@ module.exports = function(grunt) {
                         expand: true,
                         cwd: 'src/fonts/',
                         src: ['**'],
-                        dest: '_site/assets/fonts/'
+                        dest: '<%= vars.fontsBuildDir %>'
                     }
                 ]
             },
@@ -107,19 +51,48 @@ module.exports = function(grunt) {
                         expand: true,
                         cwd: 'src/images/public/',
                         src: ['**'],
-                        dest: '_site/assets/images/'
+                        dest: '<%= vars.imagesBuildDir %>'
                     }
                 ]
             }
         },
-        imagemin: {
+        sass: {
+            main: {
+                files: {
+                    '<%= vars.cssBuildDir %>/style.css': 'src/sass/style.scss'
+                }
+            }
+        },
+        cssmin: {
+            main: {
+                files: {
+                    '<%= vars.cssBuildDir %>/style.css': ['<%= vars.cssBuildDir %>/style.css']
+                }
+            }
+        },
+        jshint: {
+            options: {
+                jshintrc: './.jshintrc'
+            },
+            main: ['src/js/**/*.js']
+        },
+        browserify: {
+            main: {
+                files: {
+                    '<%= vars.scriptBuildDir %>/script.js': ['src/js/script.js'],
+                }
+            }
+        },
+        uglify: {
+            options: {
+                mangle: {
+                    except: ['jQuery']
+                }
+            },
             deploy: {
-                files: [{
-                    expand: true,
-                    cwd: '_site/assets/images/',
-                    src: ['**/*.{png,jpg,gif}'],
-                    dest: '_site/assets/images/'
-                }]
+                files: {
+                    '<%= vars.scriptBuildDir %>/script.js': ['<%= vars.scriptBuildDir %>/script.js']
+                }
             }
         },
         'cache-busting': {
@@ -127,12 +100,6 @@ module.exports = function(grunt) {
                 replace: ['_site/**/*.html'],
                 replacement: 'style.css',
                 file: '_site/assets/css/style.css',
-                get_param: true,
-            },
-            libs: {
-                replace: ['_site/**/*.html'],
-                replacement: 'libs.js',
-                file: '_site/assets/js/libs.js',
                 get_param: true,
             },
             script: {
@@ -156,26 +123,38 @@ module.exports = function(grunt) {
                 tasks: ['sass']
             },
             script: {
-                files: '<%= jshint.all %>',
-                tasks: ['jshint', 'uglify']
+                files: 'src/js/**/*.*',
+                tasks: ['jshint', 'browserify']
+            }
+        },
+        jekyll: {
+            build: {
+                options: {
+                    verbose: true
+                }
+            },
+            serve: {
+                options: {
+                    serve: true
+                }
+            }
+        },
+        concurrent: {
+            dev: {
+                options: {
+                    logConcurrentOutput: true
+                },
+                tasks: ['jekyll:serve', 'watch']
             }
         }
     });
 
     // Load tasks
-    grunt.loadNpmTasks('grunt-cache-busting');
-    grunt.loadNpmTasks('grunt-contrib-clean');
-    grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-contrib-imagemin');
-    grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-sass');
+    require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
-    // Default task(s)
+    // // Default task(s)
     grunt.registerTask('test', ['jshint']);
-    grunt.registerTask('build', ['clean', 'sass', 'uglify:develop', 'copy']);
-    grunt.registerTask('deploy', ['build', 'cssmin', 'uglify:deploy', 'imagemin', 'cache-busting']);
-    grunt.registerTask('default', ['test', 'deploy']);
+    grunt.registerTask('build', ['clean', 'jekyll:build', 'copy', 'sass', 'browserify']);
+    grunt.registerTask('deploy', ['test', 'build', 'cssmin', 'uglify', 'cache-busting']);
+    grunt.registerTask('default', ['build', 'concurrent']);
 };

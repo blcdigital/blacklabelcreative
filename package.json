@@ -1,7 +1,7 @@
 {
     "name": "blacklabelcreative",
     "description": "The black label creative website",
-    "version": "3.1.0",
+    "version": "3.2.0",
     "author": "Jasal Vadgama - http://blacklabelcreative.com/",
     "repository": {
         "type": "git",
@@ -15,18 +15,24 @@
         "all": "grunt"
     },
     "engines": {
-        "node": ">= 0.10.x"
+        "node": ">= 4.1.2"
     },
     "devDependencies": {
+        "browserify": "12.0.x",
         "grunt": "0.4.x",
+        "grunt-browserify": "4.0.x",
         "grunt-cache-busting": "0.0.x",
-        "grunt-contrib-clean": "0.6.x",
-        "grunt-contrib-copy": "0.7.x",
-        "grunt-contrib-cssmin": "0.10.x",
-        "grunt-contrib-imagemin": "0.9.x",
+        "grunt-concurrent": "2.1.x",
+        "grunt-contrib-clean": "0.7.x",
+        "grunt-contrib-copy": "0.8.x",
+        "grunt-contrib-cssmin": "0.14.x",
+        "grunt-contrib-imagemin": "1.0.x",
         "grunt-contrib-jshint": "0.11.x",
         "grunt-contrib-uglify": "0.7.x",
         "grunt-contrib-watch": "0.6.x",
-        "grunt-sass": "0.18.x"
+        "grunt-jekyll": "0.4.x",
+        "grunt-sass": "1.1.x",
+        "jquery": "2.1.x",
+        "matchdep": "1.0.x"
     }
 }

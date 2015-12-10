@@ -1,7 +1,7 @@
 {
     "name": "blacklabelcreative",
     "description": "The black label creative website",
-    "version": "3.1.0",
+    "version": "3.2.0",
     "author": "Jasal Vadgama - http://blacklabelcreative.com/",
     "private": true,
     "licenses": [
@@ -12,6 +12,7 @@
     ],
     "main": "/",
     "dependencies": {
-        "jquery": "2.1.x"
+        "normalize-scss": "3.0.x",
+        "sass-mq": "latest"
     }
 }
