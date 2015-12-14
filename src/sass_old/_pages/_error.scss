@@ -1,8 +1,12 @@
+/**
+* Error pages
+**/
+
 .error-message {
     margin: 0 auto 3.8em;
     width: 75%;
 
-    @include mq($from: large) {
+    @include modular-mq(large) {
         width: 50%;
     }
 }

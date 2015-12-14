@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    color: $grey_dark;
+    font-family: $BodyCopy;
+    font-size: 1rem;
+    line-height: 1.2;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -webkit-font-smoothing: antialiased;
+}
+
+p {
+    margin: 0 0 1.2rem;
+}
+
+a {
+    border-bottom: 1px solid transparent;
+    text-decoration: none;
+    @include transition(border-color, $transition-duration/1.2, $easing);
+
+    &:hover,
+    &:focus {
+        border-color: $grey_dark;
+        @include transition(border-color, $transition-duration/1.5, $easing);
+    }
+}

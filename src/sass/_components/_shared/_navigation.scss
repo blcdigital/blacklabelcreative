@@ -1,0 +1,38 @@
+#nav {
+    @include mq($from: medium) {
+        float: right;
+        padding-top: 87px;
+        font-size: 1.2em;
+    }
+
+    ul {
+        @include reset-list;
+        text-transform: uppercase;
+    }
+
+    li {
+        display: inline-block;
+        padding: $gutter $gutter/2 0;
+
+        @include mq($from: large) {
+            padding: $gutter 0 0 $gutter*3;
+        }
+    }
+
+    a {
+        display: block;
+        padding: $gutter 0;
+        color: $grey_dark;
+        border-bottom: 2px solid transparent;
+
+        @include transition(border-color, $transition-duration/1.2, $easing);
+
+        &:hover,
+        &:focus {
+            text-decoration: none;
+            border-bottom: 2px solid $orange;
+
+            @include transition(border-color, $transition-duration/1.5, $easing);
+        }
+    }
+}

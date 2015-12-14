@@ -1,0 +1,20 @@
+.section {
+    &-medium {
+        background: $grey_med;
+    }
+
+    &-dark {
+        background: $grey_dark;
+        color: $white;
+    }
+
+    &-homepage {
+        .content-wrapper {
+            padding: $gutter*3 $gutter;
+
+            @include mq($from: medium) {
+                padding: $gutter*7 0 $gutter*6;
+            }
+        }
+    }
+}

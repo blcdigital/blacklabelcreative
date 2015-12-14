@@ -1,32 +1,39 @@
-/**
-* Wrappers and Grid
-**/
+.no-margin-horizontal {
+    margin-right: 0;
+    margin-left: 0;
+}
+.no-padding-horizontal {
+    padding-right: 0;
+    padding-left: 0;
+}
 
+// wrapper
 .content-wrapper {
     position: relative;
     padding: 0 $gutter;
     overflow: hidden;
 
-    @include modular-mq(large) {
+    @include mq($from: large) {
         margin: 0 auto;
         padding: 0;
         width: 960px;
     }
 }
 
+// column
 .column {
     float: left;
     width: 100%;
     vertical-align: top;
 
     & + .column {
-        @include modular-mq(small) {
+        @include mq($from: small) {
             padding-left: 3%;
         }
     }
 
     // anything smaller stacks...
-    @include modular-mq(small) {
+    @include mq($from: small) {
         &.two-column {
             width: 31.333333%;
         }
@@ -38,5 +45,32 @@
         &.four-column {
             width: 62.666666%;
         }
+    }
+}
+
+// hide stuff at breakpoints
+.xs-hidden {
+    @include mq($until: small) {
+        display: none !important;
+    }
+}
+.sm-hidden {
+    @include mq($from: small, $until: medium) {
+        display: none !important;
+    }
+}
+.md-hidden {
+    @include mq($from: medium, $until: large) {
+        display: none !important;
+    }
+}
+.lg-hidden {
+    @include mq($from: large, $until: wide) {
+        display: none !important;
+    }
+}
+.wi-hidden {
+    @include mq($from: wide) {
+        display: none !important;
     }
 }

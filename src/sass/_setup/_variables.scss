@@ -1,18 +1,19 @@
-/**
-* Variables
-**/
+/* Variables */
+$assetPath: '/assets/';
+$fontPath: $assetPath + 'fonts/';
+$imagePath: $assetPath + 'images/';
 
-// File paths
-$fonts: "/assets/fonts/";
-$images: "/assets/images/";
 
-// Media Queries
+/* Breakpoints */
+$extraSmallScreen: 320px;
 $smallScreen: 480px;
 $mediumScreen: 767px;
 $largeScreen: 959px;
-$isOldIE: false !default;
+$wideScreen: 1200px;
 
-// Colours
+
+/* Colours */
+// general
 $black: #000;
 $blue: #3299bb;
 $green: #93d44f;
@@ -21,5 +22,24 @@ $grey_med: #bcbcbc;
 $orange: #ff9900;
 $white: #efefef;
 
-// Spacing
+
+/* Spacing */
 $gutter: 10px;
+
+
+/* Animation */
+$transition-duration: 0.5s;
+$easing: ease-out;
+
+
+/* Fonts */
+// body copy
+// @include font-face($name: 'Futura Light', $filename: 'futura_light-webfont');
+$BodyCopy: 'Helvetica Neue', Helvetica, Arial, sans-serif;;
+
+// headings
+// @include font-face($name: 'VAG Rounded Light', $filename: 'vag_rounded_light-webfont');
+// $HeadingCopyLight: 'VAG Rounded Light', Helvetica, Arial, sans-serif;
+
+// @include font-face($name: 'VAG Rounded Bold', $filename: 'vag_rounded_bold-webfont');
+// $HeadingCopyBold: 'VAG Rounded Bold', Helvetica, Arial, sans-serif;

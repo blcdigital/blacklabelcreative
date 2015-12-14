@@ -1,12 +1,16 @@
+/**
+* Portfolio
+**/
+
 .portfolio-item {
     article {
         margin: 0 auto 3.4em;
 
-        @include mq($from: small) {
+        @include modular-mq(small) {
             width: 85%;
         }
 
-        @include mq($from: large) {
+        @include modular-mq(large) {
             width: 75%;
         }
     }
@@ -18,7 +22,7 @@
         width: 100%;
         height: auto;
 
-        @include mq($from: medium) {
+        @include modular-mq(medium) {
             width: auto;
         }
     }

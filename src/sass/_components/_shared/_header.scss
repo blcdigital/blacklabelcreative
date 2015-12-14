@@ -1,0 +1,31 @@
+#header {
+    margin-bottom: 1em;
+    text-align: center;
+    overflow: hidden;
+
+    @include mq($from: medium) {
+        text-align: left;
+    }
+
+    @include mq($from: medium) {
+        margin-bottom: 2em;
+    }
+
+    .logo {
+        border: 0;
+
+        @include mq($from: medium) {
+            float: left;
+        }
+    }
+}
+
+.home #header {
+    margin-bottom: 0;
+    background: url($imagePath + 'london.jpg') center no-repeat;
+    background-size: cover;
+
+    .content-wrapper {
+        height: 100vh;
+    }
+}

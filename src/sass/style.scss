@@ -1,22 +1,18 @@
-// Global setup
-@import "_setup/variables";
+/* Setup */
+// Third party
+@import "../../bower_components/normalize-scss/_normalize.scss";
+
+// Site
 @import "_setup/mixins";
-@import "_setup/reset";
-@import "_setup/fonts";
-@import "_setup/global";
+@import "_setup/variables";
+@import "_setup/media-queries";
 @import "_setup/grid";
+@import "_setup/base";
 
-// Components
-@import "_components/header";
-@import "_components/footer";
 
-// Homepage sections
-@import "_components/_homepage_sections/introduction";
-@import "_components/_homepage_sections/about";
-@import "_components/_homepage_sections/portfolio";
-@import "_components/_homepage_sections/contact";
+/* Components */
+@import "_components/components";
 
-// Pages
-@import "_pages/error";
-@import "_pages/portfolio";
-@import "_pages/blog";
+
+/* Pages */
+@import "_pages/pages";

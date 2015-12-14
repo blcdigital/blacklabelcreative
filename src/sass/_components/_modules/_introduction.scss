@@ -1,0 +1,29 @@
+.introduction {
+    position: absolute;
+    top: 50%;
+    width: calc(100% - 20px);
+    text-align: center;
+    @include translate(0, -50%);
+
+    @include mq($from: large) {
+        width: 960px;
+    }
+
+    h1 {
+        margin: 0;
+        font-size: 2rem;
+        font-weight: normal;
+
+        @include mq($from: medium) {
+            font-size: 3rem;
+        }
+    }
+
+    p {
+        font-size: 1.2rem;
+
+        @include mq($from: medium) {
+            font-size: 1.4rem;
+        }
+    }
+}
