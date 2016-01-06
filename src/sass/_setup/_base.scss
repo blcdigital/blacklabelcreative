@@ -10,7 +10,7 @@ body {
     color: $grey_dark;
     font-family: $BodyCopy;
     font-size: 1rem;
-    line-height: 1.2;
+    line-height: 1.4;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: subpixel-antialiased;
     -webkit-font-smoothing: antialiased;
@@ -22,12 +22,13 @@ p {
 
 a {
     border-bottom: 1px solid transparent;
+    color: $orange;
     text-decoration: none;
-    @include transition(border-color, $transition-duration/1.2, $easing);
+    @include transition(border-color, $transition-duration, $easing);
 
     &:hover,
     &:focus {
-        border-color: $grey_dark;
-        @include transition(border-color, $transition-duration/1.5, $easing);
+        border-color: $orange;
+        @include transition(border-color, $transition-duration, $easing);
     }
 }

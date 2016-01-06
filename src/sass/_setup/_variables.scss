@@ -14,32 +14,22 @@ $wideScreen: 1200px;
 
 /* Colours */
 // general
-$black: #000;
+$black: #030303;
 $blue: #3299bb;
 $green: #93d44f;
+$grey: #bcbcbc;
 $grey_dark: #333;
-$grey_med: #bcbcbc;
 $orange: #ff9900;
 $white: #efefef;
 
 
-/* Spacing */
-$gutter: 10px;
-
-
 /* Animation */
-$transition-duration: 0.5s;
+$transition-duration: 0.2s;
 $easing: ease-out;
 
 
 /* Fonts */
-// body copy
-// @include font-face($name: 'Futura Light', $filename: 'futura_light-webfont');
-$BodyCopy: 'Helvetica Neue', Helvetica, Arial, sans-serif;;
-
 // headings
-// @include font-face($name: 'VAG Rounded Light', $filename: 'vag_rounded_light-webfont');
-// $HeadingCopyLight: 'VAG Rounded Light', Helvetica, Arial, sans-serif;
 
-// @include font-face($name: 'VAG Rounded Bold', $filename: 'vag_rounded_bold-webfont');
-// $HeadingCopyBold: 'VAG Rounded Bold', Helvetica, Arial, sans-serif;
+// body copy
+$BodyCopy: 'Helvetica Neue', Helvetica, Arial, sans-serif;;

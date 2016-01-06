@@ -1,6 +1,6 @@
 .section {
     &-medium {
-        background: $grey_med;
+        background: $grey;
     }
 
     &-dark {
@@ -10,10 +10,10 @@
 
     &-homepage {
         .content-wrapper {
-            padding: $gutter*3 $gutter;
+            padding: 30px 10px;
 
             @include mq($from: medium) {
-                padding: $gutter*7 0 $gutter*6;
+                padding: 70px 0 60px;
             }
         }
     }

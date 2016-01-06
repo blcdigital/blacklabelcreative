@@ -10,7 +10,7 @@
 // wrapper
 .content-wrapper {
     position: relative;
-    padding: 0 $gutter;
+    padding: 0 10px;
     overflow: hidden;
 
     @include mq($from: large) {

@@ -1,14 +1,11 @@
-#header {
+.header {
     margin-bottom: 1em;
     text-align: center;
     overflow: hidden;
 
     @include mq($from: medium) {
-        text-align: left;
-    }
-
-    @include mq($from: medium) {
         margin-bottom: 2em;
+        text-align: left;
     }
 
     .logo {
@@ -18,14 +15,14 @@
             float: left;
         }
     }
-}
 
-.home #header {
-    margin-bottom: 0;
-    background: url($imagePath + 'london.jpg') center no-repeat;
-    background-size: cover;
+    .home & {
+        margin-bottom: 0;
+        background: url($imagePath + 'london.jpg') center no-repeat;
+        background-size: cover;
 
-    .content-wrapper {
-        height: 100vh;
+        .content-wrapper {
+            height: 100vh;
+        }
     }
 }

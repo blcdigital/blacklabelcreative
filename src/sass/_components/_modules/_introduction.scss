@@ -11,7 +11,7 @@
 
     h1 {
         margin: 0;
-        font-size: 2rem;
+        font-size: 1.8rem;
         font-weight: normal;
 
         @include mq($from: medium) {
@@ -20,10 +20,18 @@
     }
 
     p {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
 
         @include mq($from: medium) {
             font-size: 1.4rem;
         }
     }
+}
+
+.more-link {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    text-align: center;
 }
