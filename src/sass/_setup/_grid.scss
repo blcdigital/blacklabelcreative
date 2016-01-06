@@ -10,7 +10,7 @@
 // wrapper
 .content-wrapper {
     position: relative;
-    padding: 0 10px;
+    padding: 0 20px;
     overflow: hidden;
 
     @include mq($from: large) {
@@ -24,7 +24,6 @@
 .column {
     float: left;
     width: 100%;
-    vertical-align: top;
 
     & + .column {
         @include mq($from: small) {
