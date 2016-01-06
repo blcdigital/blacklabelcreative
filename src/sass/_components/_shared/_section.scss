@@ -1,4 +1,10 @@
 .section {
+    padding: 0 20px;
+
+    @include mq($from: medium) {
+        padding: 0;
+    }
+
     &-medium {
         background: $grey;
     }
@@ -10,11 +16,15 @@
 
     &-homepage {
         .content-wrapper {
-            padding: 30px 10px;
+            padding: 30px 0;
 
             @include mq($from: medium) {
-                padding: 70px 0 60px;
+                padding: 60px 0;
             }
+        }
+
+        h2 {
+            margin-bottom: 2.2rem;
         }
     }
 }
