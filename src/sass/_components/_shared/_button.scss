@@ -10,7 +10,5 @@
     &:focus {
         background: $orange;
         color: $grey_dark;
-
-        @include transition(all, $transition-duration, $easing);
     }
 }

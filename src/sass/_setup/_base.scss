@@ -48,7 +48,6 @@ a {
     &:hover,
     &:focus {
         border-color: $orange;
-        @include transition(border-color, $transition-duration, $easing);
     }
 
     .section-medium & {

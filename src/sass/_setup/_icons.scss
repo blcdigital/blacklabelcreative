@@ -1,0 +1,27 @@
+.icon {
+    background: url($imagePath + 'sprite.png');
+
+    &.icon-github {
+        width: 33px;
+        height: 33px;
+        background-position: 0 0;
+    }
+
+    &.icon-twitter {
+        width: 33px;
+        height: 33px;
+        background-position: -102px 0;
+    }
+
+    &.icon-google {
+        width: 33px;
+        height: 33px;
+        background-position: -34px 0;
+    }
+
+    &.icon-linkedin {
+        width: 33px;
+        height: 33px;
+        background-position: -68px 0;
+    }
+}
