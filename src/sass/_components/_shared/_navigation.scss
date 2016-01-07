@@ -1,6 +1,10 @@
 #nav {
     font-size: 0.9rem;
 
+    @include mq($until: small) {
+        margin: 0 -10px;
+    }
+
     @include mq($from: medium) {
         float: right;
         padding-top: 80px;
