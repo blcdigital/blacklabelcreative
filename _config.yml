@@ -1,3 +1,4 @@
+source: ./views
 destination: ./_site
 encoding: 'utf-8'
 exclude: [
