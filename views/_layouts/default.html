@@ -1,16 +1,12 @@
 {% include document_head.html %}
 
-<body class="{% if page.type %}{{ page.type | replace: ' ', '-' }}{% endif %}{% if page.category %} {{ page.category | replace: ' ', '-' }}{% endif %}">
+<body class="{% if page.type %}{{ page.type }}{% endif %}{% if page.category %} {{ page.category | replace: ' ', '-' }}{% endif %}">
 
-{% if page.type == "home" %}
-    {% include home_header.html %}
-{% else %}
-    {% include header.html %}
-{% endif %}
+{% include header.html %}
 
-<div id="content">
+<main id="content">
     {{ content }}
-</div>
+</main>
 
 {% include footer.html %}
 

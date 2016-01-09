@@ -18,12 +18,5 @@
 
     .home & {
         margin-bottom: 0;
-        background: url($imagePath + 'london.jpg') center no-repeat;
-        background-size: cover;
-
-        .content-wrapper {
-            padding: 0 10px;
-            height: 100vh;
-        }
     }
 }

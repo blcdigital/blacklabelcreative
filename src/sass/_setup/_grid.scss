@@ -1,10 +1,11 @@
-.no-margin-horizontal {
-    margin-right: 0;
-    margin-left: 0;
-}
-.no-padding-horizontal {
-    padding-right: 0;
-    padding-left: 0;
+main {
+    .home & {
+        padding-top: calc(100vh - 184px);
+
+        @include mq($from: medium) {
+            padding-top: calc(100vh - 138px);
+        }
+    }
 }
 
 // wrapper
@@ -18,6 +19,15 @@
         padding: 0;
         width: 960px;
     }
+}
+
+.no-margin-horizontal {
+    margin-right: 0;
+    margin-left: 0;
+}
+.no-padding-horizontal {
+    padding-right: 0;
+    padding-left: 0;
 }
 
 // column
