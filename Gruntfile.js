@@ -155,6 +155,6 @@ module.exports = function(grunt) {
     // // Default task(s)
     // grunt.registerTask('test', ['jshint']);
     grunt.registerTask('build', ['clean', 'copy', 'sass'/*, 'browserify'*/]);
-    grunt.registerTask('deploy', ['test', 'jekyll:build', 'build', 'cssmin', /*'uglify', */'cache-busting']);
+    grunt.registerTask('deploy', [/*'test', */'jekyll:build', 'build', 'cssmin', /*'uglify', */'cache-busting']);
     grunt.registerTask('default', ['build', 'concurrent']);
 };

@@ -4,8 +4,11 @@
     overflow: hidden;
 
     li {
-        float: left;
         margin-bottom: 20px;
+
+        @include mq($from: small) {
+            float: left;
+        }
 
         @include mq($from: small, $until: large) {
             margin-bottom: 2.5%;
