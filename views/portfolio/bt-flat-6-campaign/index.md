@@ -12,13 +12,12 @@ gallery:
     - bt-flat6-chapter-3_2
 ---
 
-<img alt="BT Flat 6 Campaign" class="main-image" src="/assets/images/portfolio/bt-flat-6-campaign/bt-flat6-home.jpg" />
+![BT Flat 6 Campaign](/assets/images/portfolio/bt-flat-6-campaign/bt-flat6-home.jpg){: .main-image}
 
-<ul class="portfolio-item-meta">
-    <li>Client: LBi/BT</li>
-    <li>URL: <a href="http://bt.com/flat6" target="_blank">bt.com/flat6</a> (not currently live)</li>
-    <li>Technology: HTML, CSS, Javascript</li>
-</ul>
+- **Client:** LBi/BT
+- **URL:** [bt.com/flat6](http://bt.com/flat6){: target="_blank"}
+- **Technology:** HTML, CSS, Javascript
+{: .portfolio-item-meta}
 
 Working on the online portion of the campaign to introduce the BT Flatmates, I acted as the team lead. With a large amount of work to do and tight deadlines I was responsible for ensuring the work was completed to a high standard and in a timely manner, while also keeping the day-to-day work going.
 

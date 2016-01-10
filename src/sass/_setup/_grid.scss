@@ -1,9 +1,18 @@
 main {
+    margin: 0 auto;
+    max-width: 960px;
+
     .home & {
         padding-top: calc(100vh - 184px);
+        max-width: none;
 
         @include mq($from: medium) {
             padding-top: calc(100vh - 138px);
+        }
+
+        section:not(#introduction) .content-wrapper {
+            margin: 0 auto;
+            max-width: 960px;
         }
     }
 }
@@ -15,20 +24,18 @@ main {
     overflow: hidden;
 
     @include mq($from: large) {
-        margin: 0 auto;
         padding: 0;
-        width: 960px;
     }
 }
 
-.no-margin-horizontal {
-    margin-right: 0;
-    margin-left: 0;
-}
-.no-padding-horizontal {
-    padding-right: 0;
-    padding-left: 0;
-}
+// .no-margin-horizontal {
+//     margin-right: 0;
+//     margin-left: 0;
+// }
+// .no-padding-horizontal {
+//     padding-right: 0;
+//     padding-left: 0;
+// }
 
 // column
 .column {

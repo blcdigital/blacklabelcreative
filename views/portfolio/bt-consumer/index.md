@@ -10,13 +10,12 @@ gallery:
     - bt-consumer-whats-on
 ---
 
-<img alt="BT Consumer" class="main-image" src="/assets/images/portfolio/bt-consumer/bt-consumer-home.jpg" />
+![BT Consumer](/assets/images/portfolio/bt-consumer/bt-consumer-home.jpg){: .main-image}
 
-<ul class="portfolio-item-meta">
-    <li>Client: LBi/BT</li>
-    <li>URL: <a href="http://www.productsandservices.bt.com/" target="_blank">www.productsandservices.bt.com</a></li>
-    <li>Technology: HTML, CSS, Javascript</li>
-</ul>
+- **Client:** LBi/BT
+- **URL:** [www.productsandservices.bt.com](http://www.productsandservices.bt.com/){: target="_blank"}
+- **Technology:** HTML, CSS, Javascript
+{: .portfolio-item-meta}
 
 As part of the retained team I was able to work on a wide variety of improvements to the BT Consumer website as well as some new features. Development was carried out in flat HTML which was then integrated into their content management system by the BT team with the assistance of someone from LBi.
 

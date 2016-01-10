@@ -14,4 +14,9 @@
             width: auto;
         }
     }
+
+    &-item-meta {
+        @include reset-list;
+        margin-bottom: 2rem;
+    }
 }

@@ -3,13 +3,12 @@ layout: portfolio-item
 title: "Waitrose.com"
 ---
 
-<img alt="Waitrose.com" class="main-image" src="/assets/images/portfolio/waitrose/waitrose-large.png" />
+![Waitrose.com](/assets/images/portfolio/waitrose/waitrose-large.png){: .main-image}
 
-<ul class="portfolio-item-meta">
-    <li>Client: The Grand Union/Waitrose</li>
-    <li>URL: <a href="http://waitrose.com/" target="_blank">waitrose.com</a></li>
-    <li>Technology: HTML, CSS, Javascript, Java</li>
-</ul>
+- **Client:** The Grand Union/Waitrose
+- **URL:** [waitrose.com](http://waitrose.com){: target="_blank"}
+- **Technology:** HTML, CSS, Javascript
+{: .portfolio-item-meta}
 
 The brief was to deliver templates the in-house team could integrate into their ecommerce platform. However, due to the complex nature of the site we needed to create an almost full back end service to show off the features we had created. This included:
 

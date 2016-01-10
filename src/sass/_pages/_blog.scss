@@ -1,11 +1,10 @@
 .post-list {
     @include reset-list;
     margin: 0 auto 60px;
-    width: 75%;
     font-size: 1.1rem;
 
     @include mq($from: large) {
-        width: 50%;
+        width: 65%;
     }
 
     li {

@@ -2,6 +2,7 @@
 layout: post
 category: r&d
 title: "Making Holograms"
+published: false
 ---
 
 I'm not entirely sure how this whole scenario came about, most likely from a random conversation with [http://twitter.com/andydotdobson](Andy), but one warm summer afternoon (yes, I'm only writing about it now) I set aside some project work and started cutting up little bits of plastic. Much to the confusion of anyone walking passed my desk.

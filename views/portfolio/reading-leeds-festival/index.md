@@ -9,12 +9,11 @@ gallery:
     - reading-2011-info
 ---
 
-<img alt="Reading Festival 2011" class="main-image" src="/assets/images/portfolio/reading-leeds-2011/reading-2011-home.jpg" />
+![Reading Festival 2011](/assets/images/portfolio/reading-leeds-2011/reading-2011-home.jpg){: .main-image}
 
-<ul class="portfolio-item-meta">
-    <li>Client: Live Nation/Festival Republic</li>
-    <li>URL: <a href="http://readingfestival.co.uk/" target="_blank">readingfestival.co.uk</a> and <a href="http://leedsfestival.co.uk/" target="_blank">leedsfestival.co.uk</a></li>
-    <li>Technology: HTML, CSS, Javascript, .Net, XML/XPath</li>
-</ul>
+- **Client:** Live Nation/Festival Republic
+- **URL:** [readingfestival.co.uk](http://readingfestival.co.uk){: target="_blank"}
+- **Technology:** HTML, CSS, Javascript, XML, XPath
+{: .portfolio-item-meta}
 
 Reading and Leeds Festival website for 2010 and 2011.

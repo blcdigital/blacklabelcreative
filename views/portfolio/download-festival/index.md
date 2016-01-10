@@ -9,12 +9,11 @@ gallery:
     - info
 ---
 
-<img alt="Download Festival 2011" class="main-image" src="/assets/images/portfolio/download-2011/download-2011-home.jpg" />
+![Download Festival](/assets/images/portfolio/download-2011/download-2011-home.jpg){: .main-image}
 
-<ul class="portfolio-item-meta">
-    <li>Client: Live Nation</li>
-    <li>URL: <a href="http://downloadfestival.co.uk/" target="_blank">downloadfestival.co.uk</a></li>
-    <li>Technology: HTML, CSS, Javascript, .Net, XML/XPath</li>
-</ul>
+- **Client:** LBi/BT
+- **URL:** [downloadfestival.co.uk](http://downloadfestival.co.uk/){: target="_blank"}
+- **Technology:** HTML, CSS, Javascript, .Net, XML/XPath
+{: .portfolio-item-meta}
 
 Download Festival website for 2010 and 2011.

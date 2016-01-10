@@ -3,13 +3,12 @@ layout: portfolio-item
 title: "Freeview Availablity Checker"
 ---
 
-<img alt="Freeview Availablity Checker" class="main-image" src="/assets/images/portfolio/freeview/freeview-coverage-checker-large.png" />
+![Freeview Availablity Checker](/assets/images/portfolio/freeview/freeview-coverage-checker-large.png){: .main-image}
 
-<ul class="portfolio-item-meta">
-    <li>Client: FullSIX London/Freeview</li>
-    <li>URL: <a href="http://www.freeview.co.uk/availability" target="_blank">www.freeview.co.uk/availability</a></li>
-    <li>Technology: NodeJS API, PHP, Wordpress, HTML, CSS, Javascript</li>
-</ul>
+- **Client:** FullSIX London/Freeview
+- **URL:** [www.freeview.co.uk/availability](http://www.freeview.co.uk/availability){: target="_blank"}
+- **Technology:** NodeJS API, PHP, Wordpress, HTML, CSS, Javascript
+{: .portfolio-item-meta}
 
 The task for this project was to update the aging coverage checker, which was both slow to perform the check and difficult to maintain. Additionally the new service had to integrate with the current Wordpress build of the site. As such the project was split into two parts.
 

@@ -3,13 +3,12 @@ layout: portfolio-item
 title: "James Nighthawk"
 ---
 
-<img alt="James Nighthawk" class="main-image" src="/assets/images/portfolio/james-nighthawk/james-nighthawk-large.png" />
+![James Nighthawk](/assets/images/portfolio/james-nighthawk/james-nighthawk-large.png){: .main-image}
 
-<ul class="portfolio-item-meta">
-    <li>Client: James Nighthawk</li>
-    <li>URL: <a href="http://jamesnighthawk.com/" target="_blank">jamesnighthawk.com</a></li>
-    <li>Technology: Wordpress theme, HTML, CSS, Javascript</li>
-</ul>
+- **Client:** James Nighthawk
+- **URL:** [jamesnighthawk.com](http://jamesnighthawk.com){: target="_blank"}
+- **Technology:** PHP, Wordpress, HTML, CSS, Javascript
+{: .portfolio-item-meta}
 
 This is a site for an up-and-coming folk artist to showcase their work, writing and to advertise future gigs.
 

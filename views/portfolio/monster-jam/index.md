@@ -8,12 +8,11 @@ gallery:
     - info
 ---
 
-<img alt="Monster Jam 2010" class="main-image" src="/assets/images/portfolio/monster-jam/home.jpg" />
+![Monster Jam 2010](/assets/images/portfolio/monster-jam/home.jpg){: .main-image}
 
-<ul class="portfolio-item-meta">
-    <li>Client: Live Nation</li>
-    <li>URL: <a href="http://monsterjam.nl/" target="_blank">monsterjam.nl</a> (not currently live)</li>
-    <li>Technology: HTML, CSS, Javascript, XML, XPath</li>
-</ul>
+- **Client:** Live Nation
+- **URL:** [monsterjam.nl](http://monsterjam.nl){: target="_blank"}
+- **Technology:** HTML, CSS, Javascript, XML, XPath
+{: .portfolio-item-meta}
 
 Website for a Dutch monster truck event.

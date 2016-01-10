@@ -1,6 +1,11 @@
 Changelog
 ---------------------
 
+### 3.3.0
+- Removing JS
+- Refactoring HTML/MD templates
+- Refactoring SASS
+
 ### 3.2.0
 - Updating packages
 - Updating Gruntfile.js

@@ -1,5 +1,8 @@
+# Locations
 source: ./views
 destination: ./_site
+
+# Reading
 encoding: 'utf-8'
 exclude: [
     '.sass_cache',
@@ -14,4 +17,14 @@ exclude: [
 ]
 include: ['.htaccess']
 keep_files: ['assets']
+
+# Outputting
 permalink: /blog/:year/:month/:title
+
+# Conversion
+kramdown:
+    auto_ids: false
+    hard_wrap: true
+    input: GFM
+    parse_block_html: true
+    parse_span_html: true
