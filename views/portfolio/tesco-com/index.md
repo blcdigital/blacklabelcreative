@@ -16,7 +16,7 @@ gallery:
 ![Tesco.com](/assets/images/portfolio/tesco.com/tesco-home.jpg){: .main-image}
 
 - **Client:** Tesco.com
-- **URL:** [www.tesco.com](http://www.tesco.com){: target="_blank"}
+- **URL:** No longer live
 - **Technology:** HTML, CSS, Javascript
 {: .portfolio-item-meta}
 

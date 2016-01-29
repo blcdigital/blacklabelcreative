@@ -15,7 +15,7 @@ gallery:
 ![BT Flat 6 Campaign](/assets/images/portfolio/bt-flat-6-campaign/bt-flat6-home.jpg){: .main-image}
 
 - **Client:** LBi/BT
-- **URL:** [bt.com/flat6](http://bt.com/flat6){: target="_blank"}
+- **URL:** No longer live
 - **Technology:** HTML, CSS, Javascript
 {: .portfolio-item-meta}
 

@@ -58,7 +58,7 @@
         &:hover,
         &:focus {
             &:after,
-            .description {
+            h3 {
                 opacity: 1;
             }
         }
@@ -70,9 +70,10 @@
         height: auto;
     }
 
-    .description {
+    h3 {
         position: absolute;
         top: 50%;
+        margin: 0;
         padding: 20px;
         width: 100%;
         @include translate(0, -50%);
@@ -82,9 +83,5 @@
             opacity: 0;
             @include transition(opacity, $transition-duration, $easing);
         }
-
-        // h3 {
-        //     font-weight: bold;
-        // }
     }
 }

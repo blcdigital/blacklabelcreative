@@ -12,7 +12,7 @@ gallery:
 ![Reading Festival 2011](/assets/images/portfolio/reading-leeds-2011/reading-2011-home.jpg){: .main-image}
 
 - **Client:** Live Nation/Festival Republic
-- **URL:** [readingfestival.co.uk](http://readingfestival.co.uk){: target="_blank"}
+- **URL:** No longer live
 - **Technology:** HTML, CSS, Javascript, XML, XPath
 {: .portfolio-item-meta}
 

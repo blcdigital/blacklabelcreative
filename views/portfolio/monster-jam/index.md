@@ -11,7 +11,7 @@ gallery:
 ![Monster Jam 2010](/assets/images/portfolio/monster-jam/home.jpg){: .main-image}
 
 - **Client:** Live Nation
-- **URL:** [monsterjam.nl](http://monsterjam.nl){: target="_blank"}
+- **URL:** No longer live
 - **Technology:** HTML, CSS, Javascript, XML, XPath
 {: .portfolio-item-meta}
 

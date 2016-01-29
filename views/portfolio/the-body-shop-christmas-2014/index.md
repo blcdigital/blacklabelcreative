@@ -6,7 +6,7 @@ title: "The Body Shop Christmas 2014 Gift Finder"
 ![The Body Shop Christmas 2014 Gift Finder](/assets/images/portfolio/the-body-shop-christmas-2014/the-body-shop-christmas-2014-large.png){: .main-image}
 
 - **Client:** FullSIX London/The Body Shop
-- **URL:** [christmas.thebodyshop.com](http://christmas.thebodyshop.com/){: target="_blank"}
+- **URL:** No longer live
 - **Technology:** Multi-lingual NodeJS build, HTML, CSS, Javascript
 {: .portfolio-item-meta}
 

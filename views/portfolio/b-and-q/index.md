@@ -12,7 +12,7 @@ gallery:
 ![B&Q](/assets/images/portfolio/b-and-q/rooms.jpg){: .main-image}
 
 - **Client:** Javelin Group/B&Q
-- **URL:** [diy.com](http://diy.com/){: target="_blank"}
+- **URL:** No longer live
 - **Technology:** HTML, CSS, Javascript, Java
 {: .portfolio-item-meta}
 

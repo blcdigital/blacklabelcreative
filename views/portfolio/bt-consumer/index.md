@@ -13,7 +13,7 @@ gallery:
 ![BT Consumer](/assets/images/portfolio/bt-consumer/bt-consumer-home.jpg){: .main-image}
 
 - **Client:** LBi/BT
-- **URL:** [www.productsandservices.bt.com](http://www.productsandservices.bt.com/){: target="_blank"}
+- **URL:** No longer live
 - **Technology:** HTML, CSS, Javascript
 {: .portfolio-item-meta}
 
