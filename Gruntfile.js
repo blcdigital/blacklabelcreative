@@ -7,8 +7,7 @@ module.exports = function(grunt) {
             cssBuildDir: '_site/assets/css',
             dataBuildDir: '_site/assets/data',
             fontsBuildDir: '_site/assets/fonts',
-            imagesBuildDir: '_site/assets/images'//,
-            // scriptBuildDir: '_site/assets/js'
+            imagesBuildDir: '_site/assets/images'
         },
         clean: {
             fonts: {
@@ -19,10 +18,7 @@ module.exports = function(grunt) {
             },
             style: {
                 src: ['<%= vars.cssBuildDir %>']
-            }//,
-            // script: {
-            //     src: ['<%= vars.scriptBuildDir %>']
-            // }
+            }
         },
         copy: {
             data: {
@@ -70,44 +66,13 @@ module.exports = function(grunt) {
                 }
             }
         },
-        // jshint: {
-        //     options: {
-        //         jshintrc: './.jshintrc'
-        //     },
-        //     main: ['src/js/**/*.js']
-        // },
-        // browserify: {
-        //     main: {
-        //         files: {
-        //             '<%= vars.scriptBuildDir %>/script.js': ['src/js/script.js'],
-        //         }
-        //     }
-        // },
-        // uglify: {
-        //     options: {
-        //         mangle: {
-        //             except: ['jQuery']
-        //         }
-        //     },
-        //     deploy: {
-        //         files: {
-        //             '<%= vars.scriptBuildDir %>/script.js': ['<%= vars.scriptBuildDir %>/script.js']
-        //         }
-        //     }
-        // },
         'cache-busting': {
             style: {
                 replace: ['_site/**/*.html'],
                 replacement: 'style.css',
                 file: '_site/assets/css/style.css',
                 get_param: true,
-            }//,
-            // script: {
-            //     replace: ['_site/**/*.html'],
-            //     replacement: 'script.js',
-            //     file: '_site/assets/js/script.js',
-            //     get_param: true,
-            // }
+            }
         },
         watch: {
             fonts: {
@@ -121,11 +86,7 @@ module.exports = function(grunt) {
             sass: {
                 files: ['src/sass/**/*.scss'],
                 tasks: ['sass']
-            }//,
-            // script: {
-            //     files: 'src/js/**/*.*',
-            //     tasks: ['jshint', 'browserify']
-            // }
+            }
         },
         jekyll: {
             build: {
@@ -153,8 +114,7 @@ module.exports = function(grunt) {
     require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
     // // Default task(s)
-    // grunt.registerTask('test', ['jshint']);
-    grunt.registerTask('build', ['clean', 'copy', 'sass'/*, 'browserify'*/]);
-    grunt.registerTask('deploy', [/*'test', */'jekyll:build', 'build', 'cssmin', /*'uglify', */'cache-busting']);
+    grunt.registerTask('build', ['clean', 'copy', 'sass']);
+    grunt.registerTask('deploy', ['jekyll:build', 'build', 'cssmin', 'cache-busting']);
     grunt.registerTask('default', ['build', 'concurrent']);
 };
