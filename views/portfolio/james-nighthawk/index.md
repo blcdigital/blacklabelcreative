@@ -3,7 +3,7 @@ layout: portfolio-item
 title: "James Nighthawk"
 ---
 
-![James Nighthawk](/assets/images/portfolio/james-nighthawk/james-nighthawk-large.png){: .main-image}
+![James Nighthawk](/assets/images/portfolio/james-nighthawk/james-nighthawk.jpg){: .main-image}
 
 - **Client:** James Nighthawk
 - **URL:** [jamesnighthawk.com](http://jamesnighthawk.com){: target="_blank"}

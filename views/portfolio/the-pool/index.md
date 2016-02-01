@@ -3,7 +3,7 @@ layout: portfolio-item
 title: "The Pool"
 ---
 
-![The Pool](/assets/images/portfolio/the-pool/home-large.jpg){: .main-image}
+![The Pool](/assets/images/portfolio/the-pool/the-pool-home.jpg){: .main-image}
 
 - **Client:** Byng/The Pool
 - **URL:** [the-pool.com](http://the-pool.com){: target="_blank"}

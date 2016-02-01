@@ -3,7 +3,7 @@ layout: portfolio-item
 title: "Waitrose.com"
 ---
 
-![Waitrose.com](/assets/images/portfolio/waitrose/waitrose-large.png){: .main-image}
+![Waitrose.com](/assets/images/portfolio/waitrose/waitrose.jpg){: .main-image}
 
 - **Client:** The Grand Union/Waitrose
 - **URL:** [waitrose.com](http://waitrose.com){: target="_blank"}

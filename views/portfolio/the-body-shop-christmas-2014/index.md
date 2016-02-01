@@ -3,7 +3,7 @@ layout: portfolio-item
 title: "The Body Shop Christmas 2014 Gift Finder"
 ---
 
-![The Body Shop Christmas 2014 Gift Finder](/assets/images/portfolio/the-body-shop-christmas-2014/the-body-shop-christmas-2014-large.png){: .main-image}
+![The Body Shop Christmas 2014 Gift Finder](/assets/images/portfolio/the-body-shop-christmas-2014/the-body-shop-christmas-2014.jpg){: .main-image}
 
 - **Client:** FullSIX London/The Body Shop
 - **URL:** No longer live

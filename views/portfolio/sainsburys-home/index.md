@@ -3,7 +3,7 @@ layout: portfolio-item
 title: "Sainsbury's Home Ideas"
 ---
 
-![Sainsbury's Home Ideas](/assets/images/portfolio/sainsburys-home/sainsburys-home-large.png){: .main-image}
+![Sainsbury's Home Ideas](/assets/images/portfolio/sainsburys-home/sainsburys-home.jpg){: .main-image}
 
 - **Client:** FullSIX London/Sainsbury's
 - **URL:** [www.sainsburyshome.co.uk](http://www.sainsburyshome.co.uk){: target="_blank"}

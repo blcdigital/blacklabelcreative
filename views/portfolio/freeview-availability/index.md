@@ -3,7 +3,7 @@ layout: portfolio-item
 title: "Freeview Availablity Checker"
 ---
 
-![Freeview Availablity Checker](/assets/images/portfolio/freeview/freeview-coverage-checker-large.png){: .main-image}
+![Freeview Availablity Checker](/assets/images/portfolio/freeview/freeview-coverage-checker.jpg){: .main-image}
 
 - **Client:** FullSIX London/Freeview
 - **URL:** [www.freeview.co.uk/availability](http://www.freeview.co.uk/availability){: target="_blank"}
