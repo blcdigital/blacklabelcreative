@@ -9,30 +9,36 @@
     },
     "main": "/",
     "scripts": {
-        "test": "grunt test",
-        "build": "grunt build",
-        "deploy": "grunt deploy",
-        "all": "grunt"
+        "clean": "rimraf _site",
+
+        "copy:data": "mkdir -p ./_site/assets/data && cp -r ./src/data/ ./_site/assets/data/",
+        "copy:images": "mkdir -p ./_site/assets/images && cp -r ./src/images/public/ ./_site/assets/images/",
+
+        "build:html": "jekyll build",
+        "build:css": "./node_modules/.bin/node-sass ./src/sass/ --output ./_site/assets/css/",
+
+        "prebuild": "npm run clean",
+        "build": "npm run build:html && npm run build:css",
+        "postbuild": "npm run copy:data && npm run copy:images",
+
+        "deploy:css": "./node_modules/.bin/cleancss -o ./_site/assets/css/style.css ./_site/assets/css/style.css",
+
+        "predeploy": "npm run build",
+        "deploy": "npm run deploy:css",
+
+        "watch:html": "jekyll serve",
+        "watch:css": "./node_modules/.bin/node-sass ./src/sass/ --output ./_site/assets/css/ --watch",
+
+        "prewatch": "npm run build",
+        "watch": "parallelshell 'npm run watch:html' 'npm run watch:css'"
     },
     "engines": {
-        "node": ">= 4.1.2"
+        "node": ">= 4.2.6"
     },
     "devDependencies": {
-        "browserify": "12.0.x",
-        "grunt": "0.4.x",
-        "grunt-browserify": "4.0.x",
-        "grunt-cache-busting": "0.0.x",
-        "grunt-concurrent": "2.1.x",
-        "grunt-contrib-clean": "0.7.x",
-        "grunt-contrib-copy": "0.8.x",
-        "grunt-contrib-cssmin": "0.14.x",
-        "grunt-contrib-imagemin": "1.0.x",
-        "grunt-contrib-jshint": "0.11.x",
-        "grunt-contrib-uglify": "0.7.x",
-        "grunt-contrib-watch": "0.6.x",
-        "grunt-jekyll": "0.4.x",
-        "grunt-sass": "1.1.x",
-        "jquery": "2.1.x",
-        "matchdep": "1.0.x"
+        "clean-css": "3.4.x",
+        "node-sass": "3.4.x",
+        "parallelshell": "2.0.x",
+        "rimraf": "2.5.x"
     }
 }
