@@ -19,7 +19,7 @@ include: ['.htaccess']
 keep_files: ['assets']
 
 # Outputting
-permalink: /blog/:year/:month/:title
+permalink: /blog/:year/:month/:title/
 
 # Conversion
 kramdown:

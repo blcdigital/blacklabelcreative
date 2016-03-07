@@ -1,8 +1,13 @@
 .error-message {
     margin: 0 auto 3.8em;
     width: 75%;
+    text-align: center;
 
     @include mq($from: large) {
         width: 50%;
+    }
+
+    img {
+        width: 100%;
     }
 }
