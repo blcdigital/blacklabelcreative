@@ -2,6 +2,13 @@
     box-sizing: border-box;
 }
 
+::selection {
+  background: $orange;
+}
+::-moz-selection {
+  background: $orange;
+}
+
 html {
     font-size: 16px;
 }
