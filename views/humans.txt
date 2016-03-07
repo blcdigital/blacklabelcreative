@@ -5,7 +5,6 @@ Twitter: @donofkarma
 Location: London, UK
 
 /* SITE */
-Last update: 2015/12/10
+Last update: 2015/03/07
 Standards: HTML, CSS
-Components: jQuery
-Software: SublimeText 3, Grunt, Jekyll
+Software: SublimeText 3, Jekyll
