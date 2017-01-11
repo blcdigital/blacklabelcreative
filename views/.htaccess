@@ -1,8 +1,149 @@
+# BLOCK BAD BOTS
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTP_USER_AGENT} ^BlackWidow [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^Bot\ mailto:craftbot@yahoo.com [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^ChinaClaw [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^Custo [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^DISCo [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^Download\ Demon [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^eCatch [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^EirGrabber [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^EmailSiphon [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^EmailWolf [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^Express\ WebPictures [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^ExtractorPro [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^EyeNetIE [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^FlashGet [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^GetRight [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^GetWeb! [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^Go!Zilla [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^Go-Ahead-Got-It [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^GrabNet [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^Grafula [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^HMView [OR]
+    RewriteCond %{HTTP_USER_AGENT} HTTrack [NC,OR]
+    RewriteCond %{HTTP_USER_AGENT} ^Image\ Stripper [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^Image\ Sucker [OR]
+    RewriteCond %{HTTP_USER_AGENT} Indy\ Library [NC,OR]
+    RewriteCond %{HTTP_USER_AGENT} ^InterGET [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^Internet\ Ninja [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^JetCar [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^JOC\ Web\ Spider [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^larbin [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^LeechFTP [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^Mass\ Downloader [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^MIDown\ tool [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^Mister\ PiX [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^Navroad [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^NearSite [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^NetAnts [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^NetSpider [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^Net\ Vampire [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^NetZIP [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^Octopus [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^Offline\ Explorer [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^Offline\ Navigator [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^PageGrabber [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^Papa\ Foto [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^pavuk [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^pcBrowser [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^RealDownload [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^ReGet [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^SiteSnagger [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^SmartDownload [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^SuperBot [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^SuperHTTP [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^Surfbot [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^tAkeOut [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^Teleport\ Pro [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^VoidEYE [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^Web\ Image\ Collector [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^Web\ Sucker [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^WebAuto [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^WebCopier [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^WebFetch [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^WebGo\ IS [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^WebLeacher [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^WebReaper [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^WebSauger [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^Website\ eXtractor [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^Website\ Quester [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^WebStripper [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^WebWhacker [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^WebZIP [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^Wget [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^Widow [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^WWWOFFLE [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^Xaldon\ WebSpider [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^Zeus
+    RewriteRule ^.* - [F,L]
+</IfModule>
+# END BLOCK BAD BOTS
+
+# ERROR PAGES
+# 404
+ErrorDocument 404 /404/index.html
+# 500
+ErrorDocument 500 /500/index.html
+# END ERROR PAGES
+
+# REDIRECTS
+Redirect 301 /about /#about
+Redirect 301 /portfolio/download-2011 /portfolio/download-festival/
+Redirect 301 /portfolio/download-2010 /portfolio/download-festival/
+Redirect 301 /portfolio/reading-leeds-2011 /portfolio/reading-leeds-festival/
+Redirect 301 /portfolio/reading-leeds-2011 /portfolio/reading-leeds-festival/
+Redirect 301 /portfolio/stickman-photographic /portfolio
+Redirect 301 /portfolio/scholl /portfolio
+
+# REQUIRE HTTPS
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTP:X-Forwarded-Proto} !https
+    RewriteRule ^(.*)$ https://%{SERVER_NAME}/$1 [R=301,L]
+</IfModule>
+# END REQUIRE HTTPS
+
+# FILE PROTECTION
+# Restrict access to files
+<FilesMatch "^.*(error_log|wp-config\.php|wp-env.php|php.ini|\.[hH][tT][aApP].*)$">
+    Order deny,allow
+    Deny from all
+</FilesMatch>
+
+# Stop code injection
+<IfModule mod_rewrite.c>
+    Options +FollowSymLinks
+    RewriteEngine On
+    RewriteCond %{QUERY_STRING} (<|%3C).*script.*(>|%3E) [NC,OR]
+    RewriteCond %{QUERY_STRING} GLOBALS(=|[|%[0-9A-Z]{0,2}) [OR]
+    RewriteCond %{QUERY_STRING} _REQUEST(=|[|%[0-9A-Z]{0,2})
+    RewriteRule ^(.*)$ index.php [F,L]
+</IfModule>
+
+# Stop hotlinking of images
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTP_REFERER} !^$
+    RewriteCond %{HTTP_REFERER} !^http(s)://(www\.)?blacklabelcreative.com/.*$ [NC]
+    RewriteRule \.(gif|jpg|png)$ https://media.giphy.com/media/NmGbJwLl7Y4lG/giphy.gif [R,L]
+</IfModule>
+# END FILE PROTECTION
+
 # DIRECTORIES
 # Disable Directory Listings in this Directory and Subdirectories
 # This will hide the files from the public unless they know direct URLs
 Options -Indexes
 # END DIRECTORIES
+
+# HIDDEN FILES AND DIRECTORIES
+<IfModule mod_rewrite.c>
+    RewriteCond %{SCRIPT_FILENAME} -d [OR]
+    RewriteCond %{SCRIPT_FILENAME} -f
+    RewriteRule "(^|/)\." - [F]
+</IfModule>
+# END HIDDEN FILES AND DIRECTORIES
 
 # CACHE CONTROL
 <IfModule mod_expires.c>
@@ -75,7 +216,31 @@ Options -Indexes
 
     # Other
     ExpiresByType text/x-cross-domain-policy            "access plus 1 week"
+
+    # Make sure Service Worker isn't cached
+    <FilesMatch "serviceworker.js">
+        ExpiresDefault                                  "now"
+    </FilesMatch>
 </IfModule>
+
+# ALLOW CROSS DOMAIN FONTS
+<IfModule mod_headers.c>
+    <FilesMatch "\.(eot|otf|ttc|ttf|woff)$">
+        Header set Access-Control-Allow-Origin "*"
+    </FilesMatch>
+</IfModule>
+# END ALLOW CROSS DOMAIN FONTS
+
+# ALLOW CROSS DOMAIN IMAGES
+<IfModule mod_setenvif.c>
+    <IfModule mod_headers.c>
+        <FilesMatch "\.(cur|gif|ico|jpe?g|png|svgz?|webp)$">
+            SetEnvIf Origin ":" IS_CORS
+            Header set Access-Control-Allow-Origin "*" env=IS_CORS
+        </FilesMatch>
+    </IfModule>
+</IfModule>
+# END ALLOW CROSS DOMAIN IMAGES
 
 # BEGIN GZIP
 # mod_gzip compression (legacy, Apache 1.3)
@@ -93,28 +258,22 @@ Options -Indexes
 # DEFLATE compression
 <IfModule mod_deflate.c>
     # Set compression for: html,txt,xml,js,css
-    AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml application/xhtml+xml text/javascript text/css application/x-javascript application/javascript
-    # Deactivate compression for buggy browsers
-    BrowserMatch ^Mozilla/4 gzip-only-text/html
-    BrowserMatch ^Mozilla/4.0[678] no-gzip
-    BrowserMatch bMSIE !no-gzip !gzip-only-text/html
-    # Set header information for proxies
-    Header append Vary User-Agent
+    AddOutputFilterByType DEFLATE application/atom+xml \
+                                  application/javascript \
+                                  application/json \
+                                  application/rss+xml \
+                                  application/vnd.ms-fontobject \
+                                  application/x-font-ttf \
+                                  application/x-web-app-manifest+json \
+                                  application/xhtml+xml \
+                                  application/xml \
+                                  font/opentype \
+                                  image/svg+xml \
+                                  image/x-icon \
+                                  text/css \
+                                  text/html \
+                                  text/plain \
+                                  text/x-component \
+                                  text/xml
 </IfModule>
 # END DEFLATE
-
-# ERROR PAGES
-# 404
-ErrorDocument 404 /404/index.html
-# 500
-ErrorDocument 500 /500/index.html
-# END ERROR PAGES
-
-# REDIRECTS
-Redirect 301 /about /#about
-Redirect 301 /portfolio/download-2011 /portfolio/download-festival/
-Redirect 301 /portfolio/download-2010 /portfolio/download-festival/
-Redirect 301 /portfolio/reading-leeds-2011 /portfolio/reading-leeds-festival/
-Redirect 301 /portfolio/reading-leeds-2011 /portfolio/reading-leeds-festival/
-Redirect 301 /portfolio/stickman-photographic /portfolio
-Redirect 301 /portfolio/scholl /portfolio
