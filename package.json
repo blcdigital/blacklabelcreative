@@ -37,10 +37,10 @@
     },
     "devDependencies": {
         "clean-css": "3.4.x",
-        "normalize.css": "3.0.x",
-        "node-sass": "3.4.x",
+        "normalize.css": "5.0.x",
+        "node-sass": "4.3.x",
         "parallelshell": "2.0.x",
         "rimraf": "2.5.x",
-        "sass-mq": "3.2.x"
+        "sass-mq": "3.3.x"
     }
 }

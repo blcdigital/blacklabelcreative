@@ -1,6 +1,12 @@
 Changelog
 ---------------------
 
+### 3.3.1
+- Updated .htaccess to force https
+- Updated dependencies
+- Bugfix changing `page.type` to `layout.type` (Jekyll update)
+- Bugfix portfolio images on small screens
+
 ### 3.3.0
 - Removing JS
 - Refactoring HTML/MD templates

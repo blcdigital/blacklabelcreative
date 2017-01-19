@@ -1,6 +1,6 @@
 {% include document_head.html %}
 
-<body class="{% if page.type %}{{ page.type }}{% endif %}{% if page.category %} {{ page.category | replace: ' ', '-' }}{% endif %}">
+<body class="{% if layout.type %}{{ layout.type }}{% endif %}{% if page.category %} {{ page.category | replace: ' ', '-' }}{% endif %}">
 
 {% include header.html %}
 
