@@ -36,9 +36,9 @@
         "node": ">= 4.2.6"
     },
     "devDependencies": {
-        "clean-css": "3.4.x",
+        "clean-css": "4.0.x",
         "normalize.css": "5.0.x",
-        "node-sass": "4.3.x",
+        "node-sass": "4.5.x",
         "parallelshell": "2.0.x",
         "rimraf": "2.5.x",
         "sass-mq": "3.3.x"
