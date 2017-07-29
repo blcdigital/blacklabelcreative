@@ -29,8 +29,5 @@ Thumbs.db
 
 # Project files #
 #################
-.grunt/
-.sass-cache/
-bower_components/
-node_modules/
 _site/
+node_modules/

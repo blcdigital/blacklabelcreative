@@ -1,12 +1,30 @@
+/* Grid */
+@mixin create-columns($column-group) {
+    @for $i from 1 through $grid-columns {
+        .col-#{$column-group}-#{$i} {
+            // -webkit-flex: 0 1 #{(100% / $grid-columns) * $i};
+            // flex: 0 1 #{(100% / $grid-columns) * $i};
+
+            // IE11 workaround for box-sizing
+            // https://github.com/philipwalton/flexbugs#7-flex-basis-doesnt-account-for-box-sizingborder-box
+            -webkit-flex: 0 1 auto;
+            flex: 0 1 auto;
+            width: #{(100% / $grid-columns) * $i};
+        }
+
+        .col-offset-#{$column-group}-#{$i} {
+            margin-left: #{(100% / $grid-columns) * $i};
+        }
+    }
+}
+
+
 /* Font face */
 @mixin font-face($name, $filename) {
     @font-face {
         font-family: $name;
-        src: url($fontPath + '#{$filename}.eot');
-        src: url($fontPath + '#{$filename}.eot?#iefix') format('embedded-opentype'),
-             url($fontPath + '#{$filename}.woff') format('woff'),
-             url($fontPath + '#{$filename}.ttf') format('truetype'),
-             url($fontPath + '#{$filename}.svg##{$name}') format('svg');
+        src: url('/assets/fonts/#{$filename}.woff2') format('woff2'),
+             url('/assets/fonts/#{$filename}.woff') format('woff');
         font-weight: normal;
         font-style: normal;
     }
@@ -35,11 +53,23 @@
 }
 
 
+/* Reset buttons */
+@mixin reset-button {
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: 0;
+    outline: 0;
+}
+
+
 /* Text replacement */
 @mixin text-replacement($width, $height, $image) {
+    display: block;
     width: $width;
     height: $height;
     background: url($image) center center no-repeat;
+    background-size: contain;
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
@@ -91,7 +121,7 @@
 
 // transform origin
 @mixin transform-origin($origin) {
-    moz-transform-origin: $origin;
+    -moz-transform-origin: $origin;
     -o-transform-origin: $origin;
     -ms-transform-origin: $origin;
     -webkit-transform-origin: $origin;
@@ -99,23 +129,19 @@
 }
 
 // transitions
-@mixin transition($transition-property, $transition-time, $easing) {
-    -webkit-transition: $transition-property $transition-time $easing;
-    transition: $transition-property $transition-time $easing;
+@mixin transition($property: all, $time: $transition-duration, $easing: $transition-easing, $delay: 0s) {
+    -webkit-transition: $property $time $delay $easing;
+    transition: $property $time $delay $easing;
 }
 
 
 /* Gradients */
-@mixin linear-gradient($direction: 135deg, $startColor: #fff, $stopColor: #000, $startPos: 0%, $endPos: 100%) {
-    background: $startColor; // fallback
-    background: -ms-linear-gradient($direction, $startColor $startPos, $stopColor $endPos); // IE 10+
-    background: -moz-linear-gradient($direction, $startColor $startPos, $stopColor $endPos); // W3C
-    background: linear-gradient($direction, $startColor $startPos, $stopColor $endPos); // W3C
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$startColor}', endColorstr='#{$stopColor}', GradientType=1 ); // IE6-9 fallback on horizontal gradient
-}
 @mixin linear-gradient-rgba($direction: 135deg, $startColor: #fff, $stopColor: #000, $startPos: 0%, $endPos: 100%) {
     background: $startColor; // fallback
     background: -ms-linear-gradient($direction, $startColor $startPos, $stopColor $endPos); // IE 10+
-    background: -moz-linear-gradient($direction, $startColor $startPos, $stopColor $endPos); // IE 10+
+    background: -moz-linear-gradient($direction, $startColor $startPos, $stopColor $endPos); // FF ?+
     background: linear-gradient($direction, $startColor $startPos, $stopColor $endPos); // W3C
+}
+@mixin linear-gradient($direction: 135deg, $startColor: #fff, $stopColor: #000, $startPos: 0%, $endPos: 100%) {
+    @include linear-gradient-rgba($direction, $startColor, $stopColor, $startPos, $endPos);
 }

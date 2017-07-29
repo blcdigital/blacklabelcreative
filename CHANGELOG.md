@@ -1,6 +1,11 @@
 Changelog
 ---------------------
 
+### 4.0.0
+- Upadate to tooling
+- Removing blog pages as no one reads them and I never update it
+- Some general site fixes and improvements
+
 ### 3.3.1
 - Updated .htaccess to force https
 - Updated dependencies

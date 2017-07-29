@@ -81,29 +81,30 @@
 </IfModule>
 # END BLOCK BAD BOTS
 
+# REQUIRE HTTPS
+#<IfModule mod_rewrite.c>
+#    RewriteEngine On
+#    RewriteCond %{HTTP:X-Forwarded-Proto} !https
+#    RewriteRule ^(.*)$ https://%{SERVER_NAME}/$1 [R=301,L]
+#</IfModule>
+# END REQUIRE HTTPS
+
+# REDIRECTS
+Redirect 301 /about /#about
+Redirect 301 /portfolio/download-2011 /
+Redirect 301 /portfolio/download-2010 /
+Redirect 301 /portfolio/reading-leeds-2011 /
+Redirect 301 /portfolio/reading-leeds-2011 /
+Redirect 301 /portfolio/stickman-photographic /
+Redirect 301 /portfolio/scholl /
+# END REDIRECTS
+
 # ERROR PAGES
 # 404
 ErrorDocument 404 /404/index.html
 # 500
 ErrorDocument 500 /500/index.html
 # END ERROR PAGES
-
-# REDIRECTS
-Redirect 301 /about /#about
-Redirect 301 /portfolio/download-2011 /portfolio/download-festival/
-Redirect 301 /portfolio/download-2010 /portfolio/download-festival/
-Redirect 301 /portfolio/reading-leeds-2011 /portfolio/reading-leeds-festival/
-Redirect 301 /portfolio/reading-leeds-2011 /portfolio/reading-leeds-festival/
-Redirect 301 /portfolio/stickman-photographic /portfolio
-Redirect 301 /portfolio/scholl /portfolio
-
-# REQUIRE HTTPS
-<IfModule mod_rewrite.c>
-    RewriteEngine On
-    RewriteCond %{HTTP:X-Forwarded-Proto} !https
-    RewriteRule ^(.*)$ https://%{SERVER_NAME}/$1 [R=301,L]
-</IfModule>
-# END REQUIRE HTTPS
 
 # FILE PROTECTION
 # Restrict access to files
@@ -120,14 +121,6 @@ Redirect 301 /portfolio/scholl /portfolio
     RewriteCond %{QUERY_STRING} GLOBALS(=|[|%[0-9A-Z]{0,2}) [OR]
     RewriteCond %{QUERY_STRING} _REQUEST(=|[|%[0-9A-Z]{0,2})
     RewriteRule ^(.*)$ index.php [F,L]
-</IfModule>
-
-# Stop hotlinking of images
-<IfModule mod_rewrite.c>
-    RewriteEngine On
-    RewriteCond %{HTTP_REFERER} !^$
-    RewriteCond %{HTTP_REFERER} !^http(s)://(www\.)?blacklabelcreative.com/.*$ [NC]
-    RewriteRule \.(gif|jpg|png)$ https://media.giphy.com/media/NmGbJwLl7Y4lG/giphy.gif [R,L]
 </IfModule>
 # END FILE PROTECTION
 

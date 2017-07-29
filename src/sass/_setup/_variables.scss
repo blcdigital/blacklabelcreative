@@ -1,35 +1,43 @@
-/* Variables */
-$assetPath: '/assets/';
-$fontPath: $assetPath + 'fonts/';
-$imagePath: $assetPath + 'images/';
-
-
 /* Breakpoints */
 $extraSmallScreen: 320px;
 $smallScreen: 480px;
-$mediumScreen: 767px;
-$largeScreen: 959px;
+$mediumScreen: 768px;
+$largeScreen: 1024px;
 $wideScreen: 1200px;
 
 
+/* Grid */
+$grid-columns: 12;
+$grid-gutter-width: 30px;
+
+
 /* Colours */
+// brand
+$blc-blue: #3299bb;
+$blc-green: #93d44f;
+$blc-orange: #ff9900;
+
 // general
-$black: #030303;
-$blue: #3299bb;
-$green: #93d44f;
-$grey: #bcbcbc;
-$grey_dark: #333;
-$orange: #ff9900;
+$black: #000;
+$grey-light: #bcbcbc;
+$grey-medium: #999;
+$grey-dark: #333;
+$red: #ff0000;
 $white: #efefef;
+
+// style
+$background: $white;
+$copy: $grey-dark;
+$error-message: $red;
+$placeholder-copy: $grey-medium;
 
 
 /* Animation */
-$transition-duration: 0.2s;
-$easing: ease-out;
+$transition-duration: 0.25s;
+$transition-easing: ease-out;
 
 
 /* Fonts */
-// headings
+$BodyCopy: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$HeadingCopy: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
-// body copy
-$BodyCopy: 'Helvetica Neue', Helvetica, Arial, sans-serif;;

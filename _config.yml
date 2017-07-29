@@ -5,26 +5,23 @@ destination: ./_site
 # Reading
 encoding: 'utf-8'
 exclude: [
-    '.sass_cache',
-    'bower_components',
     'node_modules',
     'src',
-    'bower.json',
     'CHANGELOG.md',
-    'Gruntfile.js',
     'package.json',
-    'README.md'
+    'README.md',
+    'yarn.locl'
 ]
 include: ['.htaccess']
 keep_files: ['assets']
 
 # Outputting
-permalink: /blog/:year/:month/:title/
+permalink: /articles/:year/:month/:title/
 
 # Conversion
 kramdown:
     auto_ids: false
     hard_wrap: true
     input: GFM
-    parse_block_html: true
-    parse_span_html: true
+    parse_block_html: false
+    parse_span_html: false
