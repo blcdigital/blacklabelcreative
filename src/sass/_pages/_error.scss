@@ -1,13 +1,17 @@
 .error-message {
-    margin: 0 auto 3.8em;
-    width: 75%;
     text-align: center;
 
-    @include mq($from: large) {
-        width: 50%;
+    .row {
+        padding: $grid-gutter-width 0;
+        min-height: calc(100vh - 185px);
+
+        @include mq($from: medium) {
+            min-height: calc(100vh - 138px);
+        }
     }
 
     img {
         width: 100%;
+        max-width: 600px;
     }
 }

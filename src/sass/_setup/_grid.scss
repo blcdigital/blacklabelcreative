@@ -1,82 +1,73 @@
-main {
-    .home & {
-        padding-top: calc(100vh - 184px);
-        max-width: none;
-
-        @include mq($from: medium) {
-            padding-top: calc(100vh - 138px);
-        }
-
-        section:not(#introduction) .content-wrapper {
-            margin: 0 auto;
-            max-width: 960px;
-        }
-    }
-}
-
-// wrapper
-.content-wrapper {
+// containers
+.container-fluid {
     position: relative;
     margin: 0 auto;
-    padding: 0 20px;
-    max-width: 960px;
-    overflow: hidden;
-
-    @include mq($from: large) {
-        padding: 0;
-    }
-}
-
-// column
-.column {
-    float: left;
+    padding: 0 $grid-gutter-width/2;
     width: 100%;
+    max-width: $mediumScreen;
+}
 
-    & + .column {
-        @include mq($from: small) {
-            padding-left: 3%;
+.row {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    justify-content: flex-start;
+    margin-right: $grid-gutter-width/-2;
+    margin-left: $grid-gutter-width/-2;
+
+    // no left and right spacing
+    &--no-gutter {
+        margin-right: 0;
+        margin-left: 0;
+
+        > .col {
+            padding-right: 0;
+            padding-left: 0;
         }
     }
 
-    // anything smaller stacks...
-    @include mq($from: small) {
-        &.two-column {
-            width: 31.333333%;
-        }
+    // no spacing at all
+    &--flush-cols {
+        margin-right: 0;
+        margin-left: 0;
 
-        &.three-column {
-            width: 48.5%;
-        }
-
-        &.four-column {
-            width: 62.666666%;
+        > .col {
+            padding: 0;
         }
     }
+
+    // center align children
+    &--align-center {
+        justify-content: center;
+    }
+
+    // verically align children
+    &--align-middle {
+        align-items: center;
+    }
 }
 
-// hide stuff at breakpoints
-.xs-hidden {
-    @include mq($until: small) {
-        display: none !important;
-    }
+.col {
+    padding: $grid-gutter-width/2;
+
+    -webkit-flex: 0 1 auto;
+    flex: 0 1 auto;
+    width: 100%;
 }
-.sm-hidden {
-    @include mq($from: small, $until: medium) {
-        display: none !important;
-    }
-}
-.md-hidden {
-    @include mq($from: medium, $until: large) {
-        display: none !important;
-    }
-}
-.lg-hidden {
-    @include mq($from: large, $until: wide) {
-        display: none !important;
-    }
-}
-.wi-hidden {
-    @include mq($from: wide) {
-        display: none !important;
-    }
-}
+
+// // create grid columns
+// @include create-columns($column-group: 'xs');
+// @include mq($from: small) {
+//     @include create-columns($column-group: 'sm');
+// }
+// @include mq($from: medium) {
+//     @include create-columns($column-group: 'md');
+// }
+// @include mq($from: large) {
+//     @include create-columns($column-group: 'lg');
+// }
+// @include mq($from: wide) {
+//     @include create-columns($column-group: 'wi');
+// }

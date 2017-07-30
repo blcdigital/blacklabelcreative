@@ -1,0 +1,14 @@
+.button {
+    display: inline-block;
+    padding: 10px 15px;
+    background: $grey-dark;
+    border: 0;
+    color: $blc-orange;
+    @include transition(all);
+
+    &:hover,
+    &:focus {
+        background: $blc-orange;
+        color: $grey-dark;
+    }
+}

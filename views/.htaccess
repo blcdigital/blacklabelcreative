@@ -97,6 +97,7 @@ Redirect 301 /portfolio/reading-leeds-2011 /
 Redirect 301 /portfolio/reading-leeds-2011 /
 Redirect 301 /portfolio/stickman-photographic /
 Redirect 301 /portfolio/scholl /
+RedirectMatch 301 ^/blog/.*$ /
 # END REDIRECTS
 
 # ERROR PAGES
