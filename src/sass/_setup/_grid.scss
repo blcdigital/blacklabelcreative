@@ -57,17 +57,17 @@
     width: 100%;
 }
 
-// // create grid columns
-// @include create-columns($column-group: 'xs');
-// @include mq($from: small) {
-//     @include create-columns($column-group: 'sm');
-// }
-// @include mq($from: medium) {
-//     @include create-columns($column-group: 'md');
-// }
-// @include mq($from: large) {
-//     @include create-columns($column-group: 'lg');
-// }
-// @include mq($from: wide) {
-//     @include create-columns($column-group: 'wi');
-// }
+// create grid columns
+@include create-columns($column-group: 'xs');
+@include mq($from: small) {
+    @include create-columns($column-group: 'sm');
+}
+@include mq($from: medium) {
+    @include create-columns($column-group: 'md');
+}
+@include mq($from: large) {
+    @include create-columns($column-group: 'lg');
+}
+@include mq($from: wide) {
+    @include create-columns($column-group: 'wi');
+}
