@@ -102,9 +102,9 @@ RedirectMatch 301 ^/blog/.*$ /
 
 # ERROR PAGES
 # 404
-ErrorDocument 404 /404/index.html
+ErrorDocument 404 /404.html
 # 500
-ErrorDocument 500 /500/index.html
+ErrorDocument 500 /500.html
 # END ERROR PAGES
 
 # FILE PROTECTION
