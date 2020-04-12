@@ -55,20 +55,8 @@ article {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
 }
-
-dl {
-  margin: 0;
-  padding: 0;
-}
-dd {
-    display: inline-block;
-    margin: 0;
-}
-dd + dd {
-    padding-left: 10px;
-}
-
 
 .footer {
   font-size: 0.75rem;
